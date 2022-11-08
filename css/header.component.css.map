@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,UAAU;EACP,WAAW,EAAE,MAAM;EACnB,GAAG,EAAE,0DAA0D;;;AAElE,UAAU;EACP,WAAW,EAAE,WAAW;EACxB,GAAG,EAAE,sDAAsD;;;AAE9D,UAAU;EACP,WAAW,EAAE,uBAAuB;EACpC,GAAG,EAAC,qFAAqF;;;ADP3F,AAAA,MAAM,CAAA;EAEJ,WAAW,ECWH,MAAM;EDVd,OAAO,EAAE,IAAI;EACb,gBAAgB,ECQN,OAAe;EDPzB,KAAK,EAAE,KAAkB;EACzB,OAAO,EAAE,QAAQ;EACjB,WAAW,EAAE,MAAM;EAClB,eAAe,EAAE,aAAa;CAChC;;AAEF,AAAA,EAAE,CAAC;EACA,OAAO,EAAE,WAAW;CAItB;;AALD,AAEG,EAFD,CAEC,EAAE,CAAA;EACC,OAAO,EAAE,SAAS;CACpB",
+    "sources": [
+        "../src/app/components/header/header.component.scss",
+        "../src/app/shared/styles/_variables.scss"
+    ],
+    "names": [],
+    "file": "header.component.css"
+}

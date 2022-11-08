@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../src/app/shared/styles/_base.scss';
+@import '../src/app/shared/styles/variables';
+@import '../src/app/shared/styles/theme-material';
+
+body {
+   background-color:$main-color;
+   font-family: $main-font;
+   color: $main-text-color;
+}
+

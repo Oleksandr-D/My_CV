@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Jura';
+  src: url("../../../assets/fonts/Jura/static/Jura-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: 'Jura-bold';
+  src: url("../../../assets/fonts/Jura/static/Jura-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Montserrat_Alternates';
+  src: url("../../../assets/fonts/Montserrat_Alternates/MontserratAlternates-ExtraBold.ttf");
+}
+
+footer {
+  background-color: #131313;
+  font-family: "Jura-bold";
+  padding: 20px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer div {
+  width: 30%;
+}
+
+footer p {
+  color: #ffffff;
+}
+
+.social {
+  width: 50%;
+}
+/*# sourceMappingURL=footer.component.css.map */

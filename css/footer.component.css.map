@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,UAAU;EACP,WAAW,EAAE,MAAM;EACnB,GAAG,EAAE,0DAA0D;;;AAElE,UAAU;EACP,WAAW,EAAE,WAAW;EACxB,GAAG,EAAE,sDAAsD;;;AAE9D,UAAU;EACP,WAAW,EAAE,uBAAuB;EACpC,GAAG,EAAC,qFAAqF;;;ADR5F,AAAA,MAAM,CAAC;EAEL,gBAAgB,ECWL,OAAe;EDV3B,WAAW,ECYG,WAAW;EDXzB,OAAO,EAAE,SAAS;EAClB,OAAO,EAAE,IAAI;CAQb;;AAbD,AAMC,MANK,CAML,GAAG,CAAA;EACF,KAAK,EAAE,GAAG;CACV;;AARF,AASE,MATI,CASJ,CAAC,CAAC;EACA,KAAK,EAAE,OAAO;CAEf;;AAIH,AAAA,OAAO,CAAA;EACP,KAAK,EAAE,GACP;CAAC",
+    "sources": [
+        "../src/app/components/footer/footer.component.scss",
+        "../src/app/shared/styles/_variables.scss"
+    ],
+    "names": [],
+    "file": "footer.component.css"
+}

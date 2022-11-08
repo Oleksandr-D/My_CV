@@ -1,0 +1,42 @@
+@import'../../shared/styles/_variables.scss';
+
+.navi-wrap {
+  margin-top: 50px;
+  padding: 10px 50px;
+
+  a {
+    display: flex;
+
+    img {
+      width: 20px;
+      transition-duration: 0.5s;
+    }
+
+    img:hover {
+      transition-duration: 0.3s;
+      text-shadow: 0px 0px 10px $main-text-color;
+      transform: scaleX(1.5);
+    }
+
+    div {
+      padding-left: 5px;
+      transition-duration: 0.5s;
+    }
+
+    div:hover {
+      text-shadow: 0px 0px 10px $main-text-color;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px;
+
+  h1 {
+    font-size: 50px;
+  }
+
+}

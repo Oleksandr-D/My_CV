@@ -1,0 +1,196 @@
+@import'../../shared/styles/_variables.scss';
+
+footer {
+  height: 15vh;
+  background-color: $main-color;
+  font-family: $main-fontBold;
+  padding: 0px 50px;
+  margin-bottom: 40px;
+  display: flex;
+  color: $main-text-color;
+}
+
+.data {
+  width: 25%;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.data a {
+  width: fit-content;
+  transition-duration: 1s;
+}
+
+.data a:hover {
+  text-shadow: 0px 0px 10px $main-text-color;
+  transform: scaleX(1.1);
+}
+
+.social {
+  width: 30%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px 5px;
+  transition: .5s;
+}
+
+ul li a span {
+  position: absolute;
+  transition: transform .5s;
+}
+
+ul li a div {
+  position: absolute;
+  left: 4px;
+  top: 2px;
+  width: 80%;
+  height: 80%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+ul li a span:nth-child(1),
+ul li a span:nth-child(3) {
+  width: 100%;
+  height: 2%;
+  background: $main-text-color;
+}
+
+ul li a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform-origin: right;
+}
+
+ul li a:hover span:nth-child(1) {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .5s;
+}
+
+ul li a span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+}
+
+ul li a:hover span:nth-child(3) {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .5s;
+}
+
+ul li a span:nth-child(2),
+ul li a span:nth-child(4) {
+  width: 2%;
+  height: 100%;
+  background: $main-text-color;
+}
+
+ul li a span:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+}
+
+ul li a:hover span:nth-child(2) {
+  transform: scale(1);
+  transform-origin: top;
+  transition: transform .5s;
+}
+
+ul li a span:nth-child(4) {
+  top: 0;
+  right: 0;
+  transform: scale(0);
+  transform-origin: top;
+}
+
+ul li a:hover span:nth-child(4) {
+  transform: scale(1);
+  transform-origin: bottom;
+  transition: transform .5s;
+}
+
+.fb {
+  background-image: url('../../../assets/Images/10449w.png');
+}
+
+.in {
+  background-image: url('../../../assets/Images/linkedin_network__icon.png')
+}
+
+.git {
+  background-image: url('../../../assets/Images/github_icon.png')
+}
+
+.facebook:hover {
+  background: #2a88e7
+}
+
+.linkedin:hover {
+  background: #2e3fff
+}
+
+.github:hover {
+  background: #4f4f4f
+}
+
+.spacer-30 {
+  height: 50px;
+}
+
+@media screen and (max-width: 1025px) {
+
+  footer {
+    justify-content: space-evenly;
+    padding: 0px 10px;
+  }
+
+  .data {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    font-size: 14px;
+  }
+
+  .data {
+    width: 90%;
+    margin-right: 0px;
+    align-items: center;
+  }
+
+  .social {
+    width: inherit;
+  }
+
+}

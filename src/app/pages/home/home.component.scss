@@ -1,0 +1,271 @@
+@import'../../shared/styles/variables';
+
+.home-banner {
+  width: 100%;
+  // height: 80vh;
+  background-color: $main-color;
+  position: relative;
+  padding: 0px 50px;
+  display: flex;
+  color: $main-text-color;
+  font-family: $main-font;
+}
+
+.align-banner {
+  width: 50%;
+  padding: 10px 50px;
+}
+
+.home-image {
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../assets/Images/10.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  clip-path: polygon(32% 0, 86% 19%, 80% 100%, 0 85%);
+  transition-duration: 0.9s;
+}
+
+.home-image:hover {
+  transition-duration: 0.9s;
+  clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+  border: 2px solid $main-text-color;
+}
+
+.banner-info {
+  width: 50%;
+  padding: 100px 20px;
+
+  h1 {
+    font-size: 70px;
+    font-weight: bolder;
+    font-family: $main-fontBold;
+    transition-duration: 0.5s;
+  }
+
+  h1:hover,
+  h2:hover,
+  p:hover {
+    transition-duration: 0.5s;
+    text-shadow: 0px 0px 10px $main-text-color;
+  }
+
+  a {
+    display: block;
+    width: fit-content;
+  }
+}
+
+.banner-info>h2 {
+  transition-duration: 0.5s;
+  font-size: 50px;
+}
+
+.banner-info>p {
+  transition-duration: 0.5s;
+  font-size: 20px;
+}
+
+.banner-info>span {
+  color: $main-color;
+  font-family: $main-fontBold;
+  margin: 50px 0px;
+  position: relative;
+  display: inline-flex;
+}
+
+//Button
+
+.btn {
+  width: 350px;
+  height: 55px;
+  font-family: $main-fontBold;
+  text-align: center;
+  line-height: 45px;
+  margin-top: 50px;
+  position: relative;
+  padding: 5px 5px;
+  font-size: 1.4rem;
+  color: $main-text-color;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0px 0px 20px 0px rgb(100, 100, 100);
+}
+
+.btn:before,
+.btn:after {
+  content: '';
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+}
+
+.btn:hover {
+  color: black;
+  transition-delay: 0.5s;
+  z-index: 1;
+}
+
+.btn:hover:before {
+  transition-delay: 0s;
+}
+
+.btn:hover:after {
+  background: $main-text-color;
+  transition-delay: .35s;
+}
+
+.from-right:before,
+.from-right:after {
+  top: 0;
+  width: 0;
+  height: 100%;
+}
+
+.from-right:before {
+  left: 0;
+  border: 2px solid $main-text-color;
+  border-left: 0;
+  border-right: 0;
+  z-index: 1;
+}
+
+.from-right:after {
+  right: 0;
+}
+
+.from-right:hover:before,
+.from-right:hover:after {
+  width: 100%;
+}
+
+.spacer {
+  display: none;
+}
+
+@media screen and (max-width:1025px) {
+
+  .home-banner {
+    padding: 0px 20px;
+
+    a {
+      margin-top: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .btn {
+    margin: 0px;
+  }
+
+  .align-banner {
+    width: 100%;
+    height: 600px;
+    padding: 10px 10px;
+  }
+
+  .home-image {
+    width: 100%;
+    clip-path: polygon(32% 0, 86% 11%, 83% 100%, 0 85%);
+    background-size: cover;
+  }
+
+  .banner-info {
+    padding: 100px 0px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+
+  .home-banner {
+    flex-direction: column;
+
+    a {
+      margin: 100px 0px 100px;
+      width: 100%;
+    }
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .home-image {
+    background-position: 0px -40px;
+    clip-path: polygon(33% 0, 92% 7%, 85% 100%, 0 78%);
+  }
+
+  .banner-info {
+    width: 100%;
+    padding: 0px 20px;
+
+    p {
+      margin-top: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .home-image {
+    background-position: 0px -40px;
+    clip-path: none;
+    position: relative;
+  }
+
+  .align-banner {
+    height: 550px;
+    padding: 0px 0px;
+  }
+
+  .home-banner {
+    padding: 0px;
+  }
+
+  .home-image:hover {
+    transition-duration: none;
+    clip-path: none;
+    border: none;
+  }
+
+  .banner-info {
+    position: absolute;
+    top: 370px;
+  }
+
+  .spacer {
+    display: block;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 427px) {
+
+  .banner-info {
+    h2 {
+      font-size: 40px;
+    }
+
+    h1 {
+      font-size: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+
+  .banner-info {
+    h2 {
+      font-size: 30px;
+    }
+
+    h1 {
+      font-size: 50px;
+    }
+  }
+}
