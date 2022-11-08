@@ -1,0 +1,16 @@
+<section>
+  <h2 class="title">Data Binding</h2>
+  <p class="task-description">Task description</p>
+  <div class="wraper">
+    <div class="bad-words">Bad words: {{bad_words}}</div>
+    <div class="button-wraper">
+      <input id="word" placeholder="Word here..." type="text" [(ngModel)]="word">
+      <button class="add" (click)="addWord()">Add</button>
+      <button id="reset" value="reset" (click)="resetWords()">Reset</button>
+    </div>
+    <div class="cenzor-wraper">
+      <textarea id="texta" [(ngModel)]="getText" placeholder="Text here..."></textarea>
+      <button (click)="cenzorWords()" id="cenzor" type="text" value="Cenzor">Cenzor</button>
+    </div>
+  </div>
+</section>

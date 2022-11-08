@@ -1,13 +1,32 @@
 <section>
-   <div class="navi-wrap">
-      <a [routerLink]="['/work']">
-         <img src="../../../assets/Images/arrow_back_icon.svg">
-         <div>Back</div>
-      </a>
-   </div>
-   <div class="title">
-      <h1>Angular tasks</h1>
-   </div>
+  <div class="navi-wrap">
+    <a [routerLink]="['/work']">
+      <img src="../../../assets/Images/arrow_back_icon.svg">
+      <div>Back</div>
+    </a>
+  </div>
 
-   <a href="https://github.com/Oleksandr-D/Oleksandr-D.github.io" target="_blank">Progect Url</a>
+  <div class="title">
+    <h1>Angular tasks</h1>
+  </div>
+  <div class="spacer-100px"></div>
+  <div class="container">
+    <div class="left-wraper">
+      <ul class="task-list">
+        <li [routerLink]="['task1']">Data Binding</li>
+        <li [routerLink]="['task2']">Angular directive. DOM.</li>
+        <li [routerLink]="['task3']">Interaction between components.</li>
+        <li [routerLink]="['task4']">Pipes</li>
+        <li [routerLink]="['task5']">Angular blog. Angular Service with mock data</li>
+        <li [routerLink]="['task6']">Angular Admin Blog. Angular service with http request</li>
+      </ul>
+    </div>
+    <div class="right-wraper">
+      <div class="display">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  <div class="spacer-100px"></div>
+
 </section>

@@ -11,6 +11,12 @@ import { MyTeamSiteComponent } from './pages/my-team-site/my-team-site.component
 import { AngularTasksComponent } from './pages/angular-tasks/angular-tasks.component';
 import { SafeguardComponent } from './pages/safeguard/safeguard.component';
 import { MonosushiComponent } from './pages/monosushi/monosushi.component';
+import { Task1Component } from './pages/angular-tasks/task1/task1.component';
+import { Task2Component } from './pages/angular-tasks/task2/task2.component';
+import { Task3Component } from './pages/angular-tasks/task3/task3.component';
+import { Task4Component } from './pages/angular-tasks/task4/task4.component';
+import { Task5Component } from './pages/angular-tasks/task5/task5.component';
+import { Task6Component } from './pages/angular-tasks/task6/task6.component';
 
 const routes: Routes = [
   { path:'', component: HomeComponent },
@@ -20,9 +26,16 @@ const routes: Routes = [
   { path: 'first-project', component:FirstProjectComponent },
   { path: 'second-project', component:SecondProjectComponent },
   { path: 'my-time-site', component:MyTeamSiteComponent },
-  { path: 'angular-tasks', component:AngularTasksComponent },
+  { path: 'angular-tasks', component:AngularTasksComponent, children:[
+    {path: 'task1', component:Task1Component},
+    {path: 'task2', component:Task2Component},
+    {path: 'task3', component:Task3Component},
+    {path: 'task4', component:Task4Component},
+    {path: 'task5', component:Task5Component},
+    {path: 'task6', component:Task6Component}
+  ] },
   { path: 'safeguard', component:SafeguardComponent },
-  { path: 'monosoushi', component:MonosushiComponent }
+  { path: 'monosoushi', component:MonosushiComponent },
 ];
 
 @NgModule({
