@@ -1,7 +1,7 @@
 <section>
-  <h2 class="title">Data Binding</h2>
-  <p class="task-description">Interaction between components.
-    Component life cycle.
+  <h2 class="title">To do list</h2>
+  <p class="task-description">Sharing data between child and parent directives 
+     and components @Input and @Output decorators.
   </p>
   <div class="wrapper">
     <h1>Plan your day!</h1>
@@ -10,6 +10,6 @@
       <input type="text" id="input-task" [(ngModel)]="inputTask" name="task">
       <input type="button" id="add" value="Add" (click)="addTaskk()">
     </div>
-    <!-- <app-child [taskList]="taskList" (fromChild)="countTask($event)"></app-child> -->
+    <app-child [taskList]="taskList" (fromChild)="countTask($event)"></app-child>
   </div>
 </section>

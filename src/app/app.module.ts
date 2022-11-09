@@ -32,6 +32,7 @@ import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SharedModule } from './shared/shared.module';
+import { ChildComponent } from './pages/angular-tasks/task3/child/child.component';
 
 
 
@@ -58,7 +59,8 @@ import { SharedModule } from './shared/shared.module';
     Task3Component,
     Task4Component,
     Task5Component,
-    Task6Component
+    Task6Component,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

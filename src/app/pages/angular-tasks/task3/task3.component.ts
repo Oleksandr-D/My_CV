@@ -25,10 +25,7 @@ export class Task3Component implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-  // modal window
-  showModal(): void {
-    this.modalWindow = !this.modalWindow;
-  };
+
   // button Add
   addTaskk(): void {
     if (this.count < 6) {
@@ -47,6 +44,7 @@ export class Task3Component implements OnInit {
       }
     }
   }
+  
   // Count of task from child component
   countTask(data: number) {
     this.count = data;
