@@ -1,1 +1,55 @@
-<p>task2 works!</p>
+<section>
+  <h2 class="title">Angular directive. DOM.</h2>
+  <p class="task-description">Task description</p>
+  <div class="wrapper">
+    <form class="user-form">
+      <div class="login">
+        <p>Login</p>
+        <input type="text" [(ngModel)]="login" id="log" name="login" placeholder="Enter login"
+          title="Login must be over 2" pattern="^[a-zA-Z]{3,16}$" required>
+      </div>
+      <div class="password">
+        <p>Password</p>
+        <input type="password" [(ngModel)]="password" id="paswd" name="password"
+          placeholder="Enter password" title="password must be over 3" pattern="^[a-zA-Z0-9]{4,16}$" required>
+      </div>
+      <div class="email">
+        <p>Email address</p>
+        <input type="email" [(ngModel)]="email" id="em" name="email" placeholder="Enter email"
+          title="example@mail.com" required>
+      </div>
+      <div class="submit">
+        <input type="submit" id="addUser" (click)="newUser()" value="Add User" *ngIf="!editStatus"
+          [disabled]="addUserStatus">
+        <input type="submit" id="edit-user" (click)="updateUser()" value="Edit User" *ngIf="editStatus">
+      </div>
+    </form>
+    <div class="table-wraper">
+      <table class="user-list">
+        <thead>
+          <tr>
+            <th>№</th>
+            <th>Login</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of userForm; index as i">
+            <td>{{1+i}}</td>
+            <td>{{user.login}}</td>
+            <td>{{user.password}}</td>
+            <td>{{user.email}}</td>
+            <td><button id="edit" (click)="editUser(i)">Edit</button></td>
+            <td><button id="delete-user" (click)="deleteUser(i)" [disabled]="editStatus">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <ng-container *ngIf="userForm.length === 0">
+        <div class="empty">User list is empty</div>
+      </ng-container>
+    </div>
+  </div>
+</section>
