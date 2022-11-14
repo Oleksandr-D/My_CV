@@ -15,13 +15,11 @@ export class Task1Component implements OnInit {
   public word!: string;
   public all_bad_words: Array < any > = [];
   public modalWindow = false;
+  
   constructor() {}
 
   ngOnInit(): void {}
 
-  showModal(): void {
-    this.modalWindow = !this.modalWindow;
-  }
   addWord(): void {
     if (this.word === '') {
       alert('Please write a bad word!')
@@ -50,8 +48,7 @@ export class Task1Component implements OnInit {
           check_words[i] = str.padStart(check_words[i].length, '*');
         }
       }
-      let checked = check_words.join(' ');
-      this.getText = checked;
+      this.getText = check_words.join(' ');
       this.textarea = [];
     }
   };
