@@ -20,13 +20,15 @@ section {
   margin-bottom: 30px;
   width: 1000px;
   height: 600px;
-  background-color: rgba(236, 236, 236, 0.479);
   padding: 20px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 0px 10px 3px #949494;
   font-family: 'Courier New', Courier, monospace;
   position: relative;
+}
+
+header div b {
+  text-shadow: 1px 0px 5px rgb(214, 0, 0), 0 0 1em rgb(255, 255, 255), 0 0 0.1em rgb(134, 134, 134);
 }
 
 .input-wraper {
@@ -169,10 +171,12 @@ tr {
 td {
   text-align: center;
   border-radius: 0px;
+  transition-duration: 0.9s;
 }
 
 #light-row:hover {
-  background: linear-gradient(to right, #cacaca4d, #00416a6e);
+  background: $modal-window;
+  box-shadow: 0 0 15px 0px rgb(255, 255, 255);
 }
 
 .sort-buttons {
@@ -180,16 +184,17 @@ td {
   height: 10px;
   margin-left: 5px;
   background: none;
+  color: white;
 }
 
 .sort-buttons:hover {
-  color: white;
+  color: $disabledButton;
 }
 
 .modal-wraper {
   width: 100%;
   height: 100%;
-  background-color: rgba(168, 168, 168, 0.719);
+  background-color: $modal-back;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -201,11 +206,12 @@ td {
 .inputs-wraper {
   width: 50%;
   height: 50%;
-  background-color: rgb(206, 206, 206);
+  background-color: $modal-back;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  box-shadow: 0px 0px 10px 0px #000000;
+  box-shadow: 0px 0px 10px 0px #ffffff;
+  z-index: 1;
 }
 
 #modal-input {
