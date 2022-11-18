@@ -1,0 +1,13 @@
+{
+  "posts": [{
+    "id": 1,
+    "title": "Слава Україні!",
+    "text": "Героям Слава!",
+    "autor": "Вова Пу"
+  }],
+  "comments": [{
+    "id": 1,
+    "body": "some comment",
+    "postId": 1
+  }]
+}

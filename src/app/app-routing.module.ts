@@ -27,12 +27,13 @@ const routes: Routes = [
   { path: 'second-project', component:SecondProjectComponent },
   { path: 'my-time-site', component:MyTeamSiteComponent },
   { path: 'angular-tasks', component:AngularTasksComponent, children:[
-    {path: 'task1', component:Task1Component},
-    {path: 'task2', component:Task2Component},
-    {path: 'task3', component:Task3Component},
-    {path: 'task4', component:Task4Component},
-    {path: 'task5', component:Task5Component},
-    {path: 'task6', component:Task6Component}
+    { path: 'task1', component:Task1Component },
+    { path: 'task2', component:Task2Component},
+    { path: 'task3', component:Task3Component },
+    { path: 'task4', component:Task4Component },
+    { path: 'task5', component:Task5Component},
+    { path: 'task6', component:Task6Component },
+    { path: '', pathMatch: 'full', redirectTo:'task6' }
   ] },
   { path: 'safeguard', component:SafeguardComponent },
   { path: 'monosoushi', component:MonosushiComponent },

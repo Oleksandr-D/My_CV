@@ -11,7 +11,8 @@ export const environment = {
     authDomain: 'mycv-c836d.firebaseapp.com',
     messagingSenderId: '40044545926',
   },
-  production: false
+  production: false,
+  BACKEND_URL:'http://localhost:3000'
 };
 
 /*

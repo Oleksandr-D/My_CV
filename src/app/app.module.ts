@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -23,16 +26,12 @@ import { Task3Component } from './pages/angular-tasks/task3/task3.component';
 import { Task4Component } from './pages/angular-tasks/task4/task4.component';
 import { Task5Component } from './pages/angular-tasks/task5/task5.component';
 import { Task6Component } from './pages/angular-tasks/task6/task6.component';
+import { ChildComponent } from './pages/angular-tasks/task3/child/child.component';
 
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 
 import { environment } from '../environments/environment';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { SharedModule } from './shared/shared.module';
-import { ChildComponent } from './pages/angular-tasks/task3/child/child.component';
 
 import { SearchPipe } from './shared/pipes/search.pipe'; 
 import { SortPipe } from './shared/pipes/sort.pipe'; 
@@ -67,6 +66,7 @@ import { SortPipe } from './shared/pipes/sort.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage()),
     BrowserAnimationsModule,
