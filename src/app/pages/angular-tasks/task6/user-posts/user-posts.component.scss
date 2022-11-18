@@ -1,0 +1,45 @@
+@import '../../../../shared/styles/variables';
+
+.blog-container {
+   display: flex;
+   flex-wrap: wrap;
+   font-family: 'Trebuchet MS', sans-serif;
+ }
+ 
+ .wraper-post {
+   width: 300px;
+   margin: 10px 10px;
+   border-bottom: 2px solid rgba(0, 0, 0, 0.185);
+   border-radius: 0px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+ }
+ 
+ img {
+   width: 300px;
+ }
+ 
+ .user-name {
+   font-size: 20px;
+   color: $second-color;
+   margin-bottom: 5px;
+ }
+ 
+ .title {
+   font-size: 30px;
+ }
+ 
+ .text {
+   margin-top: 10px;
+   color: $main-text-color;
+ }
+ 
+ .empty {
+   width: 100%;
+   font-size: 25px;
+   display: flex;
+   justify-content: center;
+   margin: 10%;
+ }
+ 

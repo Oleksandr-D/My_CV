@@ -1,8 +1,11 @@
 <section>
-   <h2 class="title">Admin blog</h2>
-   <p class="task-description">Angular service with http request and json-server</p>
-
-
-
-
+  <h2 class="title">Admin blog</h2>
+  <p class="task-description">Angular service with http request and json-server</p>
+  <header>
+    <nav>
+      <li [routerLink]="['admin']">Admin</li>
+      <li [routerLink]="['user-posts']">User</li>
+    </nav>
+  </header>
+  <router-outlet></router-outlet>
 </section>

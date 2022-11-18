@@ -17,6 +17,8 @@ import { Task3Component } from './pages/angular-tasks/task3/task3.component';
 import { Task4Component } from './pages/angular-tasks/task4/task4.component';
 import { Task5Component } from './pages/angular-tasks/task5/task5.component';
 import { Task6Component } from './pages/angular-tasks/task6/task6.component';
+import { AdminComponent } from './pages/angular-tasks/task6/admin/admin.component';
+import { UserPostsComponent } from './pages/angular-tasks/task6/user-posts/user-posts.component'; 
 
 const routes: Routes = [
   { path:'', component: HomeComponent },
@@ -28,11 +30,14 @@ const routes: Routes = [
   { path: 'my-time-site', component:MyTeamSiteComponent },
   { path: 'angular-tasks', component:AngularTasksComponent, children:[
     { path: 'task1', component:Task1Component },
-    { path: 'task2', component:Task2Component},
+    { path: 'task2', component:Task2Component },
     { path: 'task3', component:Task3Component },
     { path: 'task4', component:Task4Component },
-    { path: 'task5', component:Task5Component},
-    { path: 'task6', component:Task6Component },
+    { path: 'task5', component:Task5Component },
+    { path: 'task6', component:Task6Component, children:[
+      { path: 'admin', component:AdminComponent },
+      { path: 'user-posts', component:UserPostsComponent },
+    ] },
     { path: '', pathMatch: 'full', redirectTo:'task6' }
   ] },
   { path: 'safeguard', component:SafeguardComponent },

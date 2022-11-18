@@ -1,15 +1,38 @@
 @import '../../../shared/styles/variables';
 
 section {
-   padding: 20px;
- }
- 
- .title {
-   text-align: center;
- }
- 
- .task-description {
-   margin: 10px 0px;
-   text-align: center;
-   font-size: 16px;
- }
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+}
+
+.task-description {
+  margin: 10px 0px;
+  text-align: center;
+  font-size: 16px;
+}
+
+nav {
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 22px;
+  font-family: 'Trebuchet MS', sans-serif;
+
+  li {
+    color: #e7e7e7;
+    list-style: none;
+    cursor: pointer;
+    transition: all 1s;
+    text-shadow: 1px 0px 5px #4e0092, 0 0 1em rgb(184, 0, 138), 0 0 0.1em #a600ff;
+  }
+
+  li:hover {
+    color: #ffffff;
+    text-shadow: 1px 0px 15px #8800ff, 0 0 1em rgb(255, 184, 237), 0 0 0.5em #d586ff;
+  }
+
+}

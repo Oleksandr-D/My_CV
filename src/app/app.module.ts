@@ -27,6 +27,8 @@ import { Task4Component } from './pages/angular-tasks/task4/task4.component';
 import { Task5Component } from './pages/angular-tasks/task5/task5.component';
 import { Task6Component } from './pages/angular-tasks/task6/task6.component';
 import { ChildComponent } from './pages/angular-tasks/task3/child/child.component';
+import { AdminComponent } from './pages/angular-tasks/task6/admin/admin.component';
+import { UserPostsComponent } from './pages/angular-tasks/task6/user-posts/user-posts.component'; 
 
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideStorage,getStorage } from '@angular/fire/storage';
@@ -34,7 +36,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
 
 import { SearchPipe } from './shared/pipes/search.pipe'; 
-import { SortPipe } from './shared/pipes/sort.pipe'; 
+import { SortPipe } from './shared/pipes/sort.pipe';
+
 
 
 @NgModule({
@@ -60,7 +63,9 @@ import { SortPipe } from './shared/pipes/sort.pipe';
     Task6Component,
     ChildComponent,
     SearchPipe,
-    SortPipe
+    SortPipe,
+    AdminComponent,
+    UserPostsComponent
   ],
   imports: [
     BrowserModule,
