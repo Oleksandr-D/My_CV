@@ -9,11 +9,27 @@ import { IPostRequest, IPostResponse } from '../../interfaces/task6/adminBlog.in
 })
 export class AdminBlogService {
   private url = environment.BACKEND_URL;
-  private api = { blog: `${this.url}/posts`};
+  private api = { blog: `${this.url}/posts` };
 
-  constructor( private http: HttpClient ) { }
+  constructor(private http: HttpClient) {};
 
-  getAll():Observable < IPostResponse[] > {
-    return this.http.get< IPostResponse[] >(this.api.blog);
+  //get data from
+  getAll(): Observable < IPostResponse[] > {
+    return this.http.get < IPostResponse[] > (this.api.blog);
   }
+
+  //create and post 
+  create(post: IPostRequest): Observable < IPostResponse > {
+    return this.http.post < IPostResponse > (this.api.blog, post);
+  };
+
+  //delete post
+  delete(id: number): Observable < void > {
+    return this.http.delete < void > (`${this.api.blog}/${id}`);
+  };
+  
+  //edit post button save
+  editPost(post: IPostRequest, id: number): Observable < IPostResponse > {
+    return this.http.patch < IPostResponse > (`${this.api.blog}/${id}`, post);
+  };
 }

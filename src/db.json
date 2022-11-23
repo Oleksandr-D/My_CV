@@ -1,14 +1,3 @@
 {
-  "posts": [{
-    "id": 1,
-    "title": "Слава Україні!",
-    "text": "Героям Слава!",
-    "imagePath": "https://img.pravda.com/images/doc/e/2/e24a63f-1.jpg",
-    "autor": "Вова Пу"
-  }],
-  "comments": [{
-    "id": 1,
-    "body": "some comment",
-    "postId": 1
-  }]
+  "posts": []
 }

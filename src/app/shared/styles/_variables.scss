@@ -9,8 +9,13 @@
 }
 
 @font-face {
+  font-family: 'Montserrat_Alternates-bold';
+  src: url('../../../assets/fonts/Montserrat_Alternates/MontserratAlternates-Bold.ttf');
+}
+
+@font-face {
   font-family: 'Montserrat_Alternates';
-  src: url('../../../assets/fonts/Montserrat_Alternates/MontserratAlternates-ExtraBold.ttf');
+  src: url('../../../assets/fonts/Montserrat_Alternates/MontserratAlternates-Light.ttf');
 }
 
 $main-color: rgb(19, 19, 19);
@@ -19,6 +24,7 @@ $second-color: rgb(216, 67, 67);
 $disabledButton: rgba(184, 184, 184, 0.509);
 $main-font:'Jura',sans-serif;
 $main-fontBold:'Jura-bold',sans-serif;
-$sec-font:'Montserrat_Alternates',sans-serif;
+$sec-fontBold:'Montserrat_Alternates-bold',sans-serif;
+$sec-font: 'Montserrat_Alternates',sans-serif;
 $modal-back:rgba(0, 0, 0, 0.724);
 $modal-window:linear-gradient(to right, #000000, #757575);

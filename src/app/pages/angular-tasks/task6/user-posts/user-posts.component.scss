@@ -3,7 +3,7 @@
 .blog-container {
    display: flex;
    flex-wrap: wrap;
-   font-family: 'Trebuchet MS', sans-serif;
+   font-family: $sec-fontBold;
  }
  
  .wraper-post {
@@ -33,6 +33,7 @@
  .text {
    margin-top: 10px;
    color: $main-text-color;
+   font-family: $sec-font;
  }
  
  .empty {
