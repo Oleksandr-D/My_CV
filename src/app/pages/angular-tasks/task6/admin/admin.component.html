@@ -1,13 +1,10 @@
 <section class="container-admin">
-   <div class="wraper-left-admin">
-     <p>Blogs</p>
-   </div>
    <div class="wraper-right-admin">
      <div class="input-wraper">
        <input type="text" [(ngModel)]="title" placeholder="title here...">
        <textarea type="text" [(ngModel)]="text" placeholder="text here..."></textarea>
        <input type="text" [(ngModel)]="autor" placeholder="autor here...">
-       <input type="image" [(ngModel)]="imagePath" name="imagePath">
+       <input type="url" [(ngModel)]="imagePath" name="imagePath" placeholder="image url here...">
        <button *ngIf="!editStatus" (click)="addPost()"
         [disabled]="!title || !text || !autor" class="add">Add</button>
        <button *ngIf="editStatus" (click)="save()" 
@@ -21,6 +18,7 @@
              <th>Title</th>
              <th>Text</th>
              <th>Autor</th>
+             <th>Image</th>
              <th>Edit</th>
              <th>Delete</th>
            </tr>
@@ -29,11 +27,11 @@
            <tr id="light-row" *ngFor="let post of adminPosts">
              <td>{{post.id}}</td>
              <td>{{post.title}}</td>
-             <td>{{post.text | slice:0:40}}
-               <span *ngIf="post.text.length>40"></span>
+             <td>{{post.text | slice:0:70}}
+               <span *ngIf="post.text.length > 70">...</span>
              </td>
              <td>{{post.autor}}</td>
-             <td><img [src]="post.imagePath"></td>
+             <td class="post-image"><img  [src]="post.imagePath" alt="post image"></td>
              <td><button (click)="editPost(post)" class="edit">Edit</button></td>
              <td><button [disabled]="editStatus" (click)="deletePost(post)"
                 class="delete">Delete</button></td>

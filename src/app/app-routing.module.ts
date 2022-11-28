@@ -37,6 +37,7 @@ const routes: Routes = [
     { path: 'task6', component:Task6Component, children:[
       { path: 'admin', component:AdminComponent },
       { path: 'user-posts', component:UserPostsComponent },
+      { path: '', pathMatch: 'full', redirectTo:'user-posts' }
     ] },
     { path: '', pathMatch: 'full', redirectTo:'task6' }
   ] },
