@@ -155,11 +155,15 @@ td {
     width: 100%;
   }
 
+  .table-wraper {
+    width: 100%;
+  }
+
   table {
     width: 100%;
   }
 
-  tr{
+  tr {
     font-size: 12px;
   }
 
@@ -167,5 +171,24 @@ td {
 
 @media screen and (max-width: 770px) {
 
+  .wrapper {
+    background-color: inherit;
+    padding: 0px;
+  }
 
+  #edit,
+  #delete-user {
+    width: 100%;
+  }
+
+  td {
+    padding: 0px 2px;
+  }
+}
+
+@media screen and (max-width: 341px) {
+
+  tr {
+    font-size: 10px;
+  }
 }
