@@ -18,17 +18,16 @@ section {
   margin: auto;
   margin-top: 30px;
   margin-bottom: 30px;
-  width: 1000px;
+  max-width: 1000px;
   height: 600px;
-  background-color: rgba(236, 236, 236, 0.479);
   padding: 20px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 0px 10px 3px #949494;
+
 }
 
 .input-wraper {
-  width: 670px;
+  max-width: 670px;
   height: 40px;
   display: flex;
   justify-content: space-between;
@@ -36,12 +35,13 @@ section {
 }
 
 input[type="text"] {
-  width: 515px;
+  width: 70%;
   height: 37px;
   outline: none;
   padding-left: 10px;
+  margin-right: 5px;
   font-size: 17px;
-  box-shadow: 0px 0px 6px 1px rgba(0, 43, 83, 0.993) inset;
+  box-shadow: 0px 0px 6px 1px rgba(0, 90, 174, 0.993) inset;
   font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -69,4 +69,18 @@ input[type="text"] {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
   background-color: rgba(46, 154, 255, 0.993);
+}
+
+
+@media screen and (max-width:430px) {
+
+  section {
+    padding: 0px;
+  }
+
+  .wrapper {
+    padding: 0px;
+  }
+
+
 }
