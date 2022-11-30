@@ -24,7 +24,7 @@ nav {
   margin: 50px 0px;
 
   li {
-    color:rgb(207, 207, 207);
+    color: rgb(207, 207, 207);
     list-style: none;
     cursor: pointer;
     transition: all 0.7s;
@@ -32,7 +32,7 @@ nav {
   }
 
   li:hover {
-    color:$main-text-color;
+    color: $main-text-color;
     text-shadow: 1px 0px 15px #8800ff, 0 0 1em rgb(255, 184, 237), 0 0 0.5em #d586ff;
   }
 }
