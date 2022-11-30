@@ -11,7 +11,7 @@
   <div class="spacer-100px"></div>
   <div class="container">
     <aside class="left-wraper">
-      <nav class="task-list">
+      <nav class="task-list desktop">
         <li [routerLink]="['task1']">Censor</li>
         <li [routerLink]="['task2']">User list</li>
         <li [routerLink]="['task3']">To do list</li>
@@ -20,11 +20,19 @@
         <li [routerLink]="['task6']">Admin Blog</li>
       </nav>
     </aside>
+    <nav class="mobile">
+      <li [routerLink]="['task1']">Censor</li>
+      <li [routerLink]="['task2']">User list</li>
+      <li [routerLink]="['task3']">To do list</li>
+      <li [routerLink]="['task4']">My phone book</li>
+      <li [routerLink]="['task5']">Angular blog</li>
+      <li [routerLink]="['task6']">Admin Blog</li>
+    </nav>
     <div class="right-wraper">
       <div class="display">
         <router-outlet></router-outlet>
       </div>
     </div>
   </div>
-  <div class="spacer-100px"></div>
+  <div class="spacer-150px"></div>
 </section>

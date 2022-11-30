@@ -21,27 +21,27 @@ nav {
   align-items: center;
   font-size: 22px;
   font-family: $sec-fontBold;
+  margin: 50px 0px;
 
   li {
-    color: #e7e7e7;
+    color:rgb(207, 207, 207);
     list-style: none;
     cursor: pointer;
-    transition: all 1s;
+    transition: all 0.7s;
     text-shadow: 1px 0px 5px #4e0092, 0 0 1em rgb(184, 0, 138), 0 0 0.1em #a600ff;
   }
 
   li:hover {
-    color: #ffffff;
+    color:$main-text-color;
     text-shadow: 1px 0px 15px #8800ff, 0 0 1em rgb(255, 184, 237), 0 0 0.5em #d586ff;
   }
-
 }
 
 
 @media screen and (max-width: 770px) {
 
-  section{
-    padding:0px;
+  section {
+    padding: 20px 0px;
   }
 
 }
