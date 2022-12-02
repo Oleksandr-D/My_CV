@@ -16,9 +16,9 @@ section {
 
 .wrapper {
   margin: auto;
-  margin-top: 30px;
+  margin-top: 100px;
   margin-bottom: 30px;
-  width: 1000px;
+  max-width: 1000px;
   height: 600px;
   padding: 20px;
   display: flex;
@@ -32,7 +32,7 @@ header div b {
 }
 
 .input-wraper {
-  width: 670px;
+  max-width: 670px;
   height: 40px;
   display: flex;
   justify-content: space-between;
@@ -51,6 +51,7 @@ input[type="text"] {
 }
 
 input[type="text"]::placeholder {
+  font-size: 16px;
   color: rgba(82, 82, 82, 0.418)
 }
 
@@ -61,7 +62,7 @@ input[type="text"]::placeholder {
   height: 40px;
   position: relative;
   background-color: black;
-  color: white;
+  color: $main-text-color;
   padding: 0.8em 1.8em;
   cursor: pointer;
   user-select: none;
@@ -69,6 +70,10 @@ input[type="text"]::placeholder {
   text-decoration: none;
   font-family: 'Courier New', Courier, monospace;
   transition-duration: 0.4s;
+}
+
+#btnSave {
+  border: 1px solid $main-text-color;
 }
 
 #add-phone:hover,
@@ -175,7 +180,7 @@ td {
 }
 
 #light-row:hover {
-  background:$linear-gradient;
+  background: $linear-gradient;
   box-shadow: 0 0 15px 0px rgb(255, 255, 255);
 }
 
@@ -212,6 +217,10 @@ td {
   justify-content: center;
   box-shadow: 0px 0px 10px 0px #ffffff;
   z-index: 1;
+
+  header {
+    width: 100%;
+  }
 }
 
 #modal-input {
@@ -219,7 +228,7 @@ td {
 }
 
 .ap {
-  width: 95%;
+  width: 80%;
   display: flex;
   justify-content: center;
   margin-top: 15px;
@@ -232,8 +241,19 @@ td {
 }
 
 #close-modal {
+  width: 100%;
+  text-align: end;
   height: 20px;
-  cursor: pointer;
+
+  b {
+    margin: 5px;
+    cursor: pointer;
+  }
+}
+
+.modal-title {
+  height: 40px;
+  text-align: center;
 }
 
 #close-modal:hover {
@@ -245,4 +265,81 @@ td {
   display: flex;
   justify-content: center;
   margin-top: 15px;
+}
+
+@media screen and (max-width: 1025px) {
+  #add-phone {
+    width: 40%;
+    padding: 0px 5px;
+    margin-left: 20px;
+  }
+
+  section {
+    padding: 0px;
+  }
+
+  #edit-contact,
+  #delete-contact {
+    width: 100%;
+    padding: 0.3rem;
+  }
+
+  #delete-contact {
+    margin-left: 5px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .wrapper {
+    padding: 0px;
+  }
+
+  th {
+    font-size: 14px;
+  }
+
+  .inputs-wraper {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+
+  th {
+    font-size: 12px;
+  }
+
+  td {
+    font-size: 12px;
+  }
+
+  .sort-buttons {
+    margin-left: 50px;
+  }
+
+  #delete-contact {
+    width: 100%;
+    margin: 0px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  input[type="text"]::placeholder {
+    font-size: 12px;
+  }
+
+  .inputs-wraper {
+    width: 100%;
+  }
+
+  #modal-input {
+    width: 90%;
+  }
+
+  .ap {
+    width: 90%;
+  }
 }

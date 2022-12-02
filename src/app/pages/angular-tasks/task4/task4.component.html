@@ -44,8 +44,10 @@
     <ng-container *ngIf="newContactWindow">
       <div class="modal-wraper">
         <div class="inputs-wraper">
-          <span class="ap"><b>Add phone</b></span>
-          <span (click)="closeModal()" id="close-modal"><b>✖</b></span>
+          <header>
+            <div (click)="closeModal()" id="close-modal"><b>✖</b></div>
+            <h3 class="modal-title"><b>Add phone</b></h3>
+          </header>
           <input [(ngModel)]="firstName" id="modal-input" type="text" placeholder="First name goes here">
           <input [(ngModel)]="lastName" id="modal-input" type="text" placeholder="Last name goes here">
           <input [(ngModel)]="phone" id="modal-input" type="text" placeholder="Phone goes here">
