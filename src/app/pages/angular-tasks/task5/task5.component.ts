@@ -1,7 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { AngularBlogService } from 'src/app/shared/services/angular-blog.service';
-import { IBlog } from 'src/app/shared/interfaces/task5/angularBlog.interface';
-import { IUsers } from 'src/app/shared/interfaces/task5/users.interface';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+import {
+  AngularBlogService
+} from 'src/app/shared/services/angular-blog.service';
+import {
+  IBlog
+} from 'src/app/shared/interfaces/task5/angularBlog.interface';
+import {
+  IUsers
+} from 'src/app/shared/interfaces/task5/users.interface';
 
 @Component({
   selector: 'app-task5',
@@ -140,12 +149,16 @@ export class Task5Component implements OnInit {
   };
   //button edit
   editBlog(blog: IBlog): void {
-    this.addPost()
+    this.addPost();
     this.message = blog.message;
     this.topic = blog.topic;
     this.editStatus = true;
     this.editId = blog.id;
-    this.editUserName = blog.postedBy
+    this.editUserName = blog.postedBy;
+    window.scroll({
+      top: 300,
+      behavior: 'smooth'
+    })
   };
   //button save
   savePost(): void {

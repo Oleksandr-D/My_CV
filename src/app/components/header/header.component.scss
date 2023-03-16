@@ -33,6 +33,46 @@
      }
    }
  }
+  h3{
+    line-height: 7px;
+    position: relative;
+  }
+
+ .logo{
+   font-size: 12px;
+ }
+
+ .logo::after {
+   content: "";
+   position: absolute;
+   background-color: $main-color;
+   width: 20px;
+   height: 20px;
+   border-radius: 0%;
+   border: 3px solid $second-color;
+   top: 0.5px;
+   bottom: 0;
+   left: -24px;
+   margin: 0px auto;
+   z-index: 1;
+   animation: logo 3s ease-in  infinite alternate ;
+
+ }
+
+ @keyframes logo {
+   0% {
+     transform: rotateZ(135deg);
+   }
+   25%{
+     transform: rotateZ(0deg)
+   }
+   50%{
+     transform: rotateZ(0deg)
+   }
+   100%{
+     transform: rotateZ(0deg)
+   }
+ }
 
 
  @media screen and (max-width: 600px) {

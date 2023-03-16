@@ -13,11 +13,11 @@ import {
 
 export class AboutComponent implements OnInit {
 
-  public url = 'https://drive.google.com/file/d/1pcG3iBhHl-D2aBDo-sTIx7VaV_YXyOgc/view?usp=sharing';
+  public url = 'https://drive.google.com/file/d/1kvnij_k35EKFIREdFiO5otlkWH-EcVnQ/view?usp=sharing';
 
   constructor() {}
 
   ngOnInit(): void {}
- 
+
 
 }
