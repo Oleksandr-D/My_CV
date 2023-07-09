@@ -18,7 +18,6 @@ import { FirstProjectComponent } from './pages/first-project/first-project.compo
 import { SecondProjectComponent } from './pages/second-project/second-project.component';
 import { MyTeamSiteComponent } from './pages/my-team-site/my-team-site.component';
 import { AngularTasksComponent } from './pages/angular-tasks/angular-tasks.component';
-import { SafeguardComponent } from './pages/safeguard/safeguard.component';
 import { MonosushiComponent } from './pages/monosushi/monosushi.component';
 import { Task1Component } from './pages/angular-tasks/task1/task1.component';
 import { Task2Component } from './pages/angular-tasks/task2/task2.component';
@@ -28,17 +27,16 @@ import { Task5Component } from './pages/angular-tasks/task5/task5.component';
 import { Task6Component } from './pages/angular-tasks/task6/task6.component';
 import { ChildComponent } from './pages/angular-tasks/task3/child/child.component';
 import { AdminComponent } from './pages/angular-tasks/task6/admin/admin.component';
-import { UserPostsComponent } from './pages/angular-tasks/task6/user-posts/user-posts.component'; 
+import { UserPostsComponent } from './pages/angular-tasks/task6/user-posts/user-posts.component';
+import { NoaComponent } from './pages/noa/noa.component';
 
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 
 import { environment } from '../environments/environment';
 
-import { SearchPipe } from './shared/pipes/search.pipe'; 
+import { SearchPipe } from './shared/pipes/search.pipe';
 import { SortPipe } from './shared/pipes/sort.pipe';
-
-
 
 @NgModule({
   declarations: [
@@ -53,7 +51,6 @@ import { SortPipe } from './shared/pipes/sort.pipe';
     SecondProjectComponent,
     MyTeamSiteComponent,
     AngularTasksComponent,
-    SafeguardComponent,
     MonosushiComponent,
     Task1Component,
     Task2Component,
@@ -65,7 +62,8 @@ import { SortPipe } from './shared/pipes/sort.pipe';
     SearchPipe,
     SortPipe,
     AdminComponent,
-    UserPostsComponent
+    UserPostsComponent,
+    NoaComponent
   ],
   imports: [
     BrowserModule,

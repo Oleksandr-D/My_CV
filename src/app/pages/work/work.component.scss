@@ -74,8 +74,8 @@
 .second-project,
 .team-web-site,
 .angular-tasks,
-.safeguard,
-.monosoushi {
+.monosoushi,
+.noa {
   background-image: url('../../../assets/Images/Business\ card\ web\ page.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -94,8 +94,8 @@
 .project-wraper:hover .second-project,
 .project-wraper:hover .team-web-site,
 .project-wraper:hover .angular-tasks,
-.project-wraper:hover .safeguard,
-.project-wraper:hover .monosoushi {
+.project-wraper:hover .monosoushi,
+.project-wraper:hover .noa {
   transform: rotate(10deg) translateX(120px) translateY(-30px);
   transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
@@ -112,13 +112,14 @@
   background-image: url('../../../assets/Images/angular\ tasks.jpg');
 }
 
-.safeguard {
-  background-image: url('../../../assets/Images/Safeguard.jpg');
-}
-
 .monosoushi {
   background-image: url('../../../assets/Images/Monosushi.jpg');
 }
+
+.noa {
+  background-image: url('../../../assets/Images/noa.jpg');
+}
+
 
 @media screen and (max-width: 1370px) {
   .project-wraper {
@@ -137,7 +138,7 @@
   .second-project,
   .team-web-site,
   .angular-tasks,
-  .safeguard,
+  .noa,
   .monosoushi {
     width: 100%;
     left: 0px;
@@ -158,7 +159,7 @@
   .project-wraper:hover .second-project,
   .project-wraper:hover .team-web-site,
   .project-wraper:hover .angular-tasks,
-  .project-wraper:hover .safeguard,
+  .project-wraper:hover .noa,
   .project-wraper:hover .monosoushi {
     transform: translateY(30px);
     transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);

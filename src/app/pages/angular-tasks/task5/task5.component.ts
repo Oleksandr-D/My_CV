@@ -1,16 +1,7 @@
-import {
-  Component,
-  OnInit
-} from '@angular/core';
-import {
-  AngularBlogService
-} from 'src/app/shared/services/angular-blog.service';
-import {
-  IBlog
-} from 'src/app/shared/interfaces/task5/angularBlog.interface';
-import {
-  IUsers
-} from 'src/app/shared/interfaces/task5/users.interface';
+import { Component, OnInit } from '@angular/core';
+import { AngularBlogService } from 'src/app/shared/services/angular-blog.service';
+import { IBlog } from 'src/app/shared/interfaces/task5/angularBlog.interface';
+import { IUsers } from 'src/app/shared/interfaces/task5/users.interface';
 
 @Component({
   selector: 'app-task5',

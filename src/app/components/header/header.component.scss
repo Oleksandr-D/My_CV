@@ -1,4 +1,5 @@
- @import'../../shared/styles/_variables.scss';
+ @import '../../shared/styles/_variables.scss';
+ @import '../../shared/styles/base';
 
  .desktop-header {
    height: 10vh;
@@ -33,12 +34,13 @@
      }
    }
  }
-  h3{
-    line-height: 7px;
-    position: relative;
-  }
 
- .logo{
+ h3 {
+   line-height: 7px;
+   position: relative;
+ }
+
+ .logo {
    font-size: 12px;
  }
 
@@ -55,25 +57,26 @@
    left: -24px;
    margin: 0px auto;
    z-index: 1;
-   animation: logo 3s ease-in  infinite alternate ;
-
+   animation: logo 3s ease-in infinite alternate;
  }
 
  @keyframes logo {
    0% {
      transform: rotateZ(135deg);
    }
-   25%{
+
+   25% {
      transform: rotateZ(0deg)
    }
-   50%{
+
+   50% {
      transform: rotateZ(0deg)
    }
-   100%{
+
+   100% {
      transform: rotateZ(0deg)
    }
  }
-
 
  @media screen and (max-width: 600px) {
 
@@ -109,18 +112,16 @@
      justify-content: center;
      align-items: center;
      position: absolute;
-     top: -28px;
-     right: -41px;
+     top: -30px;
+     right: -30px;
      transition-duration: 0.9s;
      overflow: hidden;
      z-index: -1;
      background-color: rgba(241, 241, 241, 0.954);
-     box-shadow: inset 0px 0px 10px 0px rgb(0, 0, 0);
    }
 
    .mobile-nav ul {
      transition-duration: 0.9s;
-     width: 100vw;
      height: 90vh;
      z-index: 10;
      transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);

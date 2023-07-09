@@ -9,7 +9,7 @@ import { FirstProjectComponent } from './pages/first-project/first-project.compo
 import { SecondProjectComponent } from './pages/second-project/second-project.component';
 import { MyTeamSiteComponent } from './pages/my-team-site/my-team-site.component';
 import { AngularTasksComponent } from './pages/angular-tasks/angular-tasks.component';
-import { SafeguardComponent } from './pages/safeguard/safeguard.component';
+import { NoaComponent } from './pages/noa/noa.component';
 import { MonosushiComponent } from './pages/monosushi/monosushi.component';
 import { Task1Component } from './pages/angular-tasks/task1/task1.component';
 import { Task2Component } from './pages/angular-tasks/task2/task2.component';
@@ -18,7 +18,7 @@ import { Task4Component } from './pages/angular-tasks/task4/task4.component';
 import { Task5Component } from './pages/angular-tasks/task5/task5.component';
 import { Task6Component } from './pages/angular-tasks/task6/task6.component';
 import { AdminComponent } from './pages/angular-tasks/task6/admin/admin.component';
-import { UserPostsComponent } from './pages/angular-tasks/task6/user-posts/user-posts.component'; 
+import { UserPostsComponent } from './pages/angular-tasks/task6/user-posts/user-posts.component';
 
 const routes: Routes = [
   { path:'', component: HomeComponent },
@@ -41,7 +41,7 @@ const routes: Routes = [
     ] },
     { path: '', pathMatch: 'full', redirectTo:'task6' }
   ] },
-  { path: 'safeguard', component:SafeguardComponent },
+  { path: 'noa', component:NoaComponent },
   { path: 'monosoushi', component:MonosushiComponent },
 ];
 
