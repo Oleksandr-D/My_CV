@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SafeguardComponent } from './safeguard.component';
+import { NoaComponent } from './noa.component';
 
-describe('SafeguardComponent', () => {
-  let component: SafeguardComponent;
-  let fixture: ComponentFixture<SafeguardComponent>;
+describe('NoaComponent', () => {
+  let component: NoaComponent;
+  let fixture: ComponentFixture<NoaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SafeguardComponent ]
+      declarations: [ NoaComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SafeguardComponent);
+    fixture = TestBed.createComponent(NoaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
