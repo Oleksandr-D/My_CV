@@ -13,7 +13,7 @@ import {
 
 export class AboutComponent implements OnInit {
 
-  public url = 'https://drive.google.com/file/d/1kvnij_k35EKFIREdFiO5otlkWH-EcVnQ/view?usp=sharing';
+  public url = 'https://drive.google.com/file/d/142BuwRYpHZuy9LUp-xFG0CKxeS83Uc9A/view?usp=drive_link';
 
   constructor() {}
 
