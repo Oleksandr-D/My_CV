@@ -14,8 +14,14 @@ public isOpen = false;
   ngOnInit(): void {
   }
 
-
   mobileMenu(){
     this.isOpen = !this.isOpen
+  }
+
+  toTop():void{
+    window.scroll({
+      top: 0,
+      behavior: 'smooth',
+    });
   }
 }

@@ -12,9 +12,10 @@ export class WorkComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openWork(){
-    
+  toTop():void{
+    window.scroll({
+      top: 0,
+      behavior: 'smooth',
+    });
   }
-
-
 }

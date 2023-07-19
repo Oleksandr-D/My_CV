@@ -4,7 +4,8 @@
   </h3>
   <nav class="desktop-nav">
     <ul>
-      <li><a [routerLink]="['/']" routerLinkActive="route-active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+      <li><a [routerLink]="['/']" routerLinkActive="route-active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      </li>
       <li><a [routerLink]="['/work']" routerLinkActive="route-active">Work</a></li>
       <li><a [routerLink]="['/about']" routerLinkActive="route-active">About</a></li>
       <li><a [routerLink]="['/contact']" routerLinkActive="route-active">Contact</a></li>
@@ -15,10 +16,10 @@
 <header class="mobile-header" (click)="mobileMenu()">
   <nav class="burger-icon" [ngClass]="{'mobile-nav':isOpen}">
     <ul>
-      <li><a [routerLink]="['/']">Home</a></li>
-      <li><a [routerLink]="['/work']">Work</a></li>
-      <li><a [routerLink]="['/about']">About</a></li>
-      <li><a [routerLink]="['/contact']">Contact</a></li>
+      <li><a [routerLink]="['/']" (click)="toTop()">Home</a></li>
+      <li><a [routerLink]="['/work']" (click)="toTop()">Work</a></li>
+      <li><a [routerLink]="['/about']" (click)="toTop()">About</a></li>
+      <li><a [routerLink]="['/contact']" (click)="toTop()">Contact</a></li>
     </ul>
   </nav>
 </header>
