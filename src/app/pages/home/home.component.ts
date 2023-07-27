@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
+  isMobileScreen!: boolean;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkScreenSize();
   }
 
+  constructor() {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize() {
+    this.isMobileScreen = window.innerWidth < 1026;
+  }
+
+  shouldAutoplay() {
+    return !this.isMobileScreen;
+  }
 }

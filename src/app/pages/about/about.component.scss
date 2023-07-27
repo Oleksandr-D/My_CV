@@ -1,9 +1,19 @@
 @import'../../shared/styles/variables';
 
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .container {
   width: 100%;
   font-family: $main-font;
-  background-color: $main-color;
+  background-color: $background-color;
   color: $main-text-color;
 }
 
@@ -18,7 +28,6 @@
 
   p {
     background-image: url('../../../assets/Images/4а.jpg');
-    opacity: 0.9;
     width: 100%;
     height: 600px;
     background-size: cover;
@@ -83,7 +92,6 @@
   margin: 50px 0px;
 }
 
-//Button
 .btn {
   width: 100%;
   height: 50px;
@@ -154,7 +162,10 @@
   align-items: center;
 }
 
-// education section
+.experiance-section {
+  margin-top: 100px;
+}
+
 .education-header {
   position: relative;
   margin: auto;
@@ -163,8 +174,8 @@
     width: 20%;
     height: 10%;
     position: absolute;
-    left: 118px;
-    top: 48px;
+    left: 180px;
+    top: 45px;
     right: 0px;
     bottom: 0px;
     text-transform: uppercase;
@@ -177,6 +188,7 @@
     text-transform: uppercase;
     position: relative;
     padding-bottom: 15px;
+    margin-left: 20px;
   }
 
   h1:after {
@@ -188,6 +200,21 @@
     top: 100%;
     left: 0;
   }
+}
+
+.edu-scroll,
+.lerning-scroll,
+.ex-scroll,
+.inv-scroll {
+  transition: all 1.2s ease-out;
+}
+
+.education-header .scrolled {
+  left: 127px;
+}
+
+.education-header .scrolled-left {
+  transform: translateX(-5%);
 }
 
 .education-data {
@@ -213,12 +240,6 @@
   right: 0;
   margin: 0px auto;
 }
-
-// #lerning-scroll {
-//   position: absolute;
-//   right: 1px;
-//   left: 131px;
-// }
 
 .educationbox {
   display: flex;
@@ -299,10 +320,6 @@
   z-index: 1;
 }
 
-.experiance-section {
-  margin: 100px 0px 300px;
-}
-
 .wraper-experiancebox {
   width: 80%;
   display: flex;
@@ -341,10 +358,15 @@
 
 .experiancebox:hover .experiancebox-year {
   transition-duration: 2.0s;
-  height: 100%;
+  height: 80%;
   z-index: 10;
   transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
-  font-size: 70px;
+  font-size: 50px;
+}
+
+.spacer-200 {
+  height: 200px;
+  background-color: $background-color;
 }
 
 @media screen and (max-width:1025px) {
@@ -364,6 +386,10 @@
     width: 100%;
     justify-content: space-evenly;
     margin-top: 10%;
+  }
+
+  .experiancebox:hover .experiancebox-year {
+    display: none;
   }
 }
 
@@ -400,7 +426,7 @@
   }
 
   .education-section {
-    margin-top: 100px;
+    padding-top: 100px;
   }
 
   .educationbox-info {
@@ -426,14 +452,13 @@
     font-size: 50px;
     transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
   }
-
-  .experiance-section {
-    margin: 100px 0px 200px;
-  }
-
 }
 
 @media screen and (max-width: 600px) {
+
+  .background-video {
+    display: none;
+  }
 
   .photo {
     width: 100%;
@@ -487,7 +512,6 @@
   .experiancebox-year {
     display: none;
   }
-
 }
 
 @media screen and (max-width: 427px) {
@@ -507,4 +531,15 @@
     width: 90%;
   }
 
+  .wraper-experiancebox {
+    height: 100%;
+
+    .experiancebox {
+      margin-bottom: 50px;
+    }
+  }
+
+  .spacer-200 {
+    height: 100px;
+  }
 }

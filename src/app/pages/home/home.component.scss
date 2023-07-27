@@ -1,9 +1,19 @@
 @import'../../shared/styles/variables';
 
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .home-banner {
   width: 100%;
-  // height: 80vh;
-  background-color: $main-color;
+  min-height: calc(100vh - 25vh);
+  background-color: $background-color;
   position: relative;
   padding: 0px 50px;
   display: flex;
@@ -22,7 +32,7 @@
   background-image: url('../../../assets/Images/10.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  clip-path: polygon(32% 0, 86% 19%, 80% 100%, 0 85%);
+  clip-path: polygon(33% 0, 92% 17%, 83% 100%, 0 85%);
   transition-duration: 0.9s;
 }
 
@@ -64,6 +74,7 @@
 .banner-info>p {
   transition-duration: 0.5s;
   font-size: 20px;
+  margin-top: 30px;
 }
 
 .banner-info>span {
@@ -73,8 +84,6 @@
   position: relative;
   display: inline-flex;
 }
-
-//Button
 
 .btn {
   width: 350px;
@@ -146,7 +155,15 @@
   display: none;
 }
 
-@media screen and (max-width:1025px) {
+@media screen and (max-width:1510px) {
+
+  .banner-info h1 {
+    line-height: 65px;
+  }
+}
+
+
+@media screen and (max-width:1125px) {
 
   .home-banner {
     padding: 0px 20px;
@@ -212,6 +229,10 @@
 
 @media screen and (max-width: 600px) {
 
+  .background-video {
+    display: none;
+  }
+
   .home-image {
     background-position: 0px -40px;
     clip-path: none;
@@ -224,6 +245,7 @@
   }
 
   .home-banner {
+
     padding: 0px;
   }
 
@@ -241,6 +263,7 @@
   .spacer {
     display: block;
     height: 500px;
+    background-color: $background-color;
   }
 }
 
@@ -254,6 +277,10 @@
     h1 {
       font-size: 60px;
     }
+  }
+
+  .banner-info>p {
+    margin-top: 0px;
   }
 }
 
