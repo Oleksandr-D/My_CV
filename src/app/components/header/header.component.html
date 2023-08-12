@@ -3,12 +3,35 @@
     <a class="logo" [routerLink]="['/']">Oleksandr<br>Dolbnia</a>
   </h3>
   <nav class="desktop-nav">
+    <audio id="sound">
+      <source src="../../../assets/audio/button2.mp3" type="audio/mpeg">
+    </audio>
     <ul>
-      <li><a [routerLink]="['/']" routerLinkActive="route-active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <li>
+        <a [routerLink]="['/']" routerLinkActive="route-active"
+             [routerLinkActiveOptions]="{exact: true}"
+             (mouseenter)="playNavSound()" (mouseleave)="stopNavSound()">
+             Home
+        </a>
       </li>
-      <li><a [routerLink]="['/work']" routerLinkActive="route-active">Work</a></li>
-      <li><a [routerLink]="['/about']" routerLinkActive="route-active">About</a></li>
-      <li><a [routerLink]="['/contact']" routerLinkActive="route-active">Contact</a></li>
+      <li>
+        <a [routerLink]="['/work']" routerLinkActive="route-active"
+             (mouseenter)="playNavSound()" (mouseleave)="stopNavSound()">
+             Work
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/about']" routerLinkActive="route-active"
+             (mouseenter)="playNavSound()" (mouseleave)="stopNavSound()">
+             About
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/contact']" routerLinkActive="route-active"
+             (mouseenter)="playNavSound()" (mouseleave)="stopNavSound()">
+             Contact
+        </a>
+      </li>
     </ul>
   </nav>
 </header>

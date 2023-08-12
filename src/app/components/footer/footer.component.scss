@@ -6,7 +6,7 @@ footer {
   font-family: $main-fontBold;
   padding: 0px 50px;
   display: flex;
-  color: $main-text-color;
+  color: $second-text-color;
 }
 
 .data {
@@ -23,7 +23,7 @@ footer {
 }
 
 .data a:hover {
-  text-shadow: 0px 0px 10px $main-text-color;
+  text-shadow: 0px 0px 1px $main-text-color;
   transform: scaleX(1.1);
 }
 

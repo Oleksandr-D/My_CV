@@ -5,19 +5,30 @@
   <audio [autoplay]="shouldAutoplay()" loop>
     <source src="../../../assets/audio/Catching Stars - Drifting Apart.mp3" type="audio/mpeg">
   </audio>
-  <div class="home-banner">
+  <audio id="hover-sound">
+    <source src="../../../assets/audio/foto2.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="name-sound">
+    <source src="../../../assets/audio/logo.mp3" type="audio/mpeg">
+  </audio>
+  <div class="home-banner"> 
     <div class="align-banner">
-      <div class="home-image"></div>
+      <div class="home-image" (mouseenter)="playHoverSound()" (mouseleave)="stopHoverSound()">
+      </div>
     </div>
     <div class="banner-info">
-      <h2>Hello, I`m</h2>
-      <h1>Oleksandr Dolbnia</h1>
+      <h2 (mouseenter)="playNameSound()" (mouseleave)="stopNameSound()">Hello, I`m</h2>
+      <div>
+        <h1 (mouseenter)="playNameSound()" (mouseleave)="stopNameSound()">Oleksandr Dolbnia</h1>
+      </div>
       <p>I'm a front-end web developer who does a bit of web design.
         My main areas of knowledge include Javascript, Typescript,
         HTML, CSS, SCSS and Angular.
       </p>
       <a [routerLink]="['/work']">
-        <div class="btn from-right">See my works</div>
+        <div class="btn from-right" (mouseenter)="playHoverSound()" (mouseleave)="stopHoverSound()">
+          See my works
+        </div>
       </a>
     </div>
   </div>
