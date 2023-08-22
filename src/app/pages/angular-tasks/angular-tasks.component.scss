@@ -19,11 +19,13 @@
     }
 
     div {
+      color: $second-text-color;
       padding-left: 5px;
       transition-duration: 0.5s;
     }
 
     div:hover {
+      color: $main-text-color;
       text-shadow: 0px 0px 10px $main-text-color;
       transform: scale(1.2);
     }

@@ -40,5 +40,4 @@ public isOpen = false;
       stopSound.currentTime = 0;
     }
   }
-
 }

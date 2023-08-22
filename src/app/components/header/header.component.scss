@@ -29,6 +29,7 @@
        display: block;
        padding: 5px 25px;
        transition-duration: 0.5s;
+       letter-spacing: 1.5px;
      }
 
      a:hover {
@@ -47,25 +48,26 @@
  }
 
  h3 {
-   line-height: 7px;
+   line-height: 80%;
+   margin-left: 50px;
    position: relative;
  }
 
  .logo {
-   font-size: 12px;
+   font-size: 14px;
  }
 
  .logo::after {
    content: "";
    position: absolute;
-   background-color: $main-color;
+   background-color: #151515;
    width: 20px;
    height: 20px;
    border-radius: 0%;
-   border: 3px solid $second-color;
-   top: 0.5px;
+   border: 3px solid #da3737;
+   top: 24px;
    bottom: 0;
-   left: -24px;
+   left: 60px;
    margin: 0px auto;
    z-index: 1;
    animation: logo 3s ease-in infinite alternate;
@@ -73,11 +75,7 @@
 
  @keyframes logo {
    0% {
-     transform: rotateZ(135deg);
-   }
-
-   25% {
-     transform: rotateZ(0deg)
+     transform: rotateZ(220deg);
    }
 
    50% {

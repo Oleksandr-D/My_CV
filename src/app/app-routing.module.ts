@@ -21,6 +21,7 @@ import { AdminComponent } from './pages/angular-tasks/task6/admin/admin.componen
 import { UserPostsComponent } from './pages/angular-tasks/task6/user-posts/user-posts.component';
 
 const routes: Routes = [
+  
   { path:'', component: HomeComponent },
   { path:'contact', component:ContactComponent} ,
   { path: 'about', component:AboutComponent },

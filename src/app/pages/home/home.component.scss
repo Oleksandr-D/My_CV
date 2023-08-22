@@ -15,7 +15,7 @@
   min-height: calc(100vh - 25vh);
   background-color: $background-color;
   position: relative;
-  padding: 0px 50px;
+  padding: 0px 20px;
   display: flex;
   color: $main-text-color;
   font-family: $main-font;
@@ -23,7 +23,7 @@
 
 .align-banner {
   width: 50%;
-  padding: 10px 50px;
+  padding: 20px 20px;
 }
 
 .home-image {
@@ -44,7 +44,7 @@
 
 .banner-info {
   width: 50%;
-  padding: 100px 20px 0px;
+  padding: 80px 20px 0px;
 
   h1 {
     font-size: 70px;
@@ -53,7 +53,8 @@
     line-height: 110%;
     display: inline;
     transition-duration: 0.5s;
-    cursor:pointer;
+    letter-spacing: 2px;
+    cursor: pointer;
   }
 
   h1:hover,
@@ -67,9 +68,9 @@
     transition-duration: 0.5s;
     font-size: 50px;
     line-height: 100%;
-    cursor:pointer;
+    cursor: pointer;
   }
-  
+
   p {
     color: $second-text-color;
     transition-duration: 0.5s;
@@ -83,14 +84,6 @@
     width: fit-content;
   }
 }
-
-// .banner-info>span {
-//   color: $main-color;
-//   font-family: $main-fontBold;
-//   margin: 50px 0px;
-//   position: relative;
-//   display: inline-flex;
-// }
 
 .btn {
   width: 350px;
@@ -200,7 +193,7 @@
   }
 
   .banner-info {
-    padding: 100px 0px;
+    padding: 80px 0px;
   }
 }
 
@@ -264,7 +257,7 @@
 
   .banner-info {
     position: absolute;
-    top: 370px;
+    top: 442px;
   }
 
   .spacer {
@@ -295,11 +288,16 @@
 
   .banner-info {
     h2 {
-      font-size: 30px;
+      font-size: 28px;
     }
 
     h1 {
-      font-size: 50px;
+      font-size: 45px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 14px;
     }
   }
 }

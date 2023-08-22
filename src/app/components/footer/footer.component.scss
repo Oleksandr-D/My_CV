@@ -11,7 +11,7 @@ footer {
 
 .data {
   width: 25%;
-  margin-right: 20px;
+  margin-right: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -134,34 +134,34 @@ ul li a:hover span:nth-child(4) {
 }
 
 .fb {
-  background-image: url('../../../assets/Images/10449w.png');
+  background-image: url('../../../assets/Images/facebook_grey1.png');
 }
 
 .in {
-  background-image: url('../../../assets/Images/linkedin_network__icon.png')
+  background-image: url('../../../assets/Images/linkedin-icon.png')
 }
 
 .git {
-  background-image: url('../../../assets/Images/github_icon.png')
+  background-image: url('../../../assets/Images/git_icon.png')
 }
 
 .facebook:hover {
-  background: #2a88e7
+  background: #2d8ff1
 }
 
 .linkedin:hover {
-  background: #2e3fff
+  background: #3848ff
 }
 
 .github:hover {
-  background: #4f4f4f
+  background: #212121
 }
 
 .spacer-30 {
   height: 50px;
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1220px) {
 
   footer {
     justify-content: space-evenly;
@@ -192,5 +192,11 @@ ul li a:hover span:nth-child(4) {
     width: inherit;
     margin-bottom: 40px;
   }
+}
 
+@media screen and (max-width: 311px) {
+  .data a span {
+    font-size: 12px;
+
+  }
 }

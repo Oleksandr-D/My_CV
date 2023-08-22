@@ -37,6 +37,7 @@ import { environment } from '../environments/environment';
 
 import { SearchPipe } from './shared/pipes/search.pipe';
 import { SortPipe } from './shared/pipes/sort.pipe';
+import { WelcomeComponent } from './pages/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { SortPipe } from './shared/pipes/sort.pipe';
     SortPipe,
     AdminComponent,
     UserPostsComponent,
-    NoaComponent
+    NoaComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

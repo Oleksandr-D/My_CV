@@ -23,8 +23,9 @@ export class AboutComponent implements OnInit {
   private handleScroll(h1Selector: string, pSelector: string) {
     const h1Element = document.querySelector(h1Selector) as HTMLElement;
     const pElement = document.querySelector(pSelector) as HTMLElement;
+    const windowWidth = window.innerWidth;
 
-    if (h1Element && pElement) {
+    if (h1Element && pElement && windowWidth > 310 ) {
       const h1Offset = h1Element.getBoundingClientRect().top;
       const pOffset = pElement.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
