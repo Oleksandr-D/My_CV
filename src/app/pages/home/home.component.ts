@@ -1,15 +1,26 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
   public isMobileScreen!: boolean;
 
-  constructor() {
+  constructor(private router: Router) {
     this.checkScreenSize();
+  }
+
+  ngOnInit(): void {
+    this.checkScreenSizeAndRedirect();
+  }
+
+  checkScreenSizeAndRedirect() {
+    if (window.innerWidth >= 1240) {
+      this.router.navigate(['/home']);
+    }
   }
 
   @HostListener('window:resize', ['$event'])

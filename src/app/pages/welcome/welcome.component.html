@@ -1,1 +1,23 @@
-<p>welcome works!</p>
+<section [routerLink]="['/home']" class="container-fluid">
+  <div class="wraper">
+    <div class="square"></div>
+    <div class="wraper-text">
+      <div class="info">
+        <h1> Welcome</h1>
+        <p>to my personal website! I am delighted to introduce
+          you to my personal space, where you can
+          &nbsp;learn more about me and my work.<br>
+          &nbsp;To get started, please click<br>
+          &nbsp;the button below.
+        </p>
+        <div class="button-wraper">
+          <a [routerLink]="['/home']">
+            <div class="btn from-right">
+              Start
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

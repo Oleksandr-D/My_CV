@@ -1,34 +1,33 @@
+<!-- <audio id="sound">
+  <source src="../../../assets/audio/button1.mp3" type="audio/mpeg">
+</audio> -->
 <header class="desktop-header">
   <h3>
-    <a class="logo" [routerLink]="['/']">Oleksandr<br>Dolbnia</a>
+    <a class="logo" [routerLink]="['/home']">Oleksandr<br>Dolbnia</a>
   </h3>
   <nav class="desktop-nav">
-    <audio id="sound">
-      <source src="../../../assets/audio/button2.mp3" type="audio/mpeg">
-    </audio>
     <ul>
       <li>
-        <a [routerLink]="['/']" routerLinkActive="route-active"
-             [routerLinkActiveOptions]="{exact: true}"
-             (mouseenter)="playNavSound()" (mouseleave)="stopNavSound()">
+        <a [routerLink]="['/home']" routerLinkActive="route-active"
+             (click)="playNavSound()">
              Home
         </a>
       </li>
       <li>
         <a [routerLink]="['/work']" routerLinkActive="route-active"
-             (mouseenter)="playNavSound()" (mouseleave)="stopNavSound()">
+        (click)="playNavSound()">
              Work
         </a>
       </li>
       <li>
         <a [routerLink]="['/about']" routerLinkActive="route-active"
-             (mouseenter)="playNavSound()" (mouseleave)="stopNavSound()">
+        (click)="playNavSound()">
              About
         </a>
       </li>
       <li>
         <a [routerLink]="['/contact']" routerLinkActive="route-active"
-             (mouseenter)="playNavSound()" (mouseleave)="stopNavSound()">
+        (click)="playNavSound()">
              Contact
         </a>
       </li>
@@ -39,7 +38,7 @@
 <header class="mobile-header" (click)="mobileMenu()">
   <nav class="burger-icon" [ngClass]="{'mobile-nav':isOpen}">
     <ul>
-      <li><a [routerLink]="['/']" (click)="toTop()">Home</a></li>
+      <li><a [routerLink]="['/home']" (click)="toTop()">Home</a></li>
       <li><a [routerLink]="['/work']" (click)="toTop()">Work</a></li>
       <li><a [routerLink]="['/about']" (click)="toTop()">About</a></li>
       <li><a [routerLink]="['/contact']" (click)="toTop()">Contact</a></li>

@@ -29,6 +29,7 @@ import { ChildComponent } from './pages/angular-tasks/task3/child/child.componen
 import { AdminComponent } from './pages/angular-tasks/task6/admin/admin.component';
 import { UserPostsComponent } from './pages/angular-tasks/task6/user-posts/user-posts.component';
 import { NoaComponent } from './pages/noa/noa.component';
+import { WelcomeComponent } from './pages/welcome/welcome.component';
 
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideStorage,getStorage } from '@angular/fire/storage';
@@ -37,7 +38,7 @@ import { environment } from '../environments/environment';
 
 import { SearchPipe } from './shared/pipes/search.pipe';
 import { SortPipe } from './shared/pipes/sort.pipe';
-import { WelcomeComponent } from './pages/welcome/welcome.component';
+
 
 @NgModule({
   declarations: [

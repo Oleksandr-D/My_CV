@@ -19,10 +19,11 @@ import { Task5Component } from './pages/angular-tasks/task5/task5.component';
 import { Task6Component } from './pages/angular-tasks/task6/task6.component';
 import { AdminComponent } from './pages/angular-tasks/task6/admin/admin.component';
 import { UserPostsComponent } from './pages/angular-tasks/task6/user-posts/user-posts.component';
+import { WelcomeComponent } from './pages/welcome/welcome.component';
 
 const routes: Routes = [
-  
-  { path:'', component: HomeComponent },
+  { path: '', component:WelcomeComponent},
+  { path:'home', component: HomeComponent },
   { path:'contact', component:ContactComponent} ,
   { path: 'about', component:AboutComponent },
   { path: 'work', component:WorkComponent },

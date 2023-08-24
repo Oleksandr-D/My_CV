@@ -1,0 +1,198 @@
+@import'../../shared/styles/variables';
+
+.container-fluid {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.912)), url('../../../assets/Images/welcome_backgr.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.wraper {
+  margin: 0 auto;
+  position: relative;
+}
+
+.square {
+  width: 300px;
+  height: 300px;
+  border: 12px solid $second-color;
+}
+
+.wraper-text {
+  position: absolute;
+  top: 91px;
+  left: 105px;
+}
+
+.info {
+  width: 100%;
+
+  h1 {
+    font-family: $main-fontBold;
+    font-size: 94px;
+    line-height: 100%;
+    letter-spacing: 33px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 140%;
+    margin-top: 30px;
+    color: $second-text-color;
+    text-align: center;
+  }
+}
+
+.button-wraper {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px 0px 10px;
+
+  a {
+    display: block;
+    width: fit-content;
+  }
+}
+
+.btn {
+  width: 230px;
+  height: 65px;
+  font-family: "Jura-bold", sans-serif;
+  color: #f4f4f4;
+  text-align: center;
+  line-height: 56px;
+  margin: 0 auto;
+  position: relative;
+  padding: 5px 5px;
+  font-size: 22px;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0px 0px 20px 0px rgb(205, 205, 205);
+}
+
+.btn:before,
+.btn:after {
+  content: '';
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+}
+
+.btn:hover {
+  color: black;
+  transition-delay: 0.5s;
+  z-index: 1;
+}
+
+.btn:hover:before {
+  transition-delay: 0s;
+}
+
+.btn:hover:after {
+  background: $main-text-color;
+  transition-delay: .35s;
+}
+
+.from-right:before,
+.from-right:after {
+  top: 0;
+  width: 0;
+  height: 100%;
+}
+
+.from-right:before {
+  left: 0;
+  border: 2px solid $main-text-color;
+  border-left: 0;
+  border-right: 0;
+  z-index: 1;
+}
+
+.from-right:after {
+  right: 0;
+}
+
+.from-right:hover:before,
+.from-right:hover:after {
+  width: 100%;
+}
+
+
+@media screen and (max-width: 1240px) {
+  .square {
+    width: 200px;
+    height: 200px;
+    border: 10px solid $second-color;
+  }
+
+  .wraper-text {
+    top: 80px;
+    left: 80px;
+  }
+
+  .info {
+    h1 {
+      font-size: 46px;
+      letter-spacing: 23px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-top: 7px;
+    }
+  }
+}
+
+@media screen and (max-width: 705px) {
+  .square {
+    width: 100px;
+    height: 100px;
+    border: 8px solid $second-color;
+  }
+
+  .wraper-text {
+
+    top: 27px;
+    left: -125px;
+  }
+
+  .info {
+
+    h1 {
+      width: 100%;
+      font-size: 46px;
+      letter-spacing: 23px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-top: 40px;
+    }
+  }
+
+  .button-wraper {
+    margin: 50px 0px 0px 0px;
+  }
+}
+
+@media screen and (max-width: 395px) {
+
+  .wraper-text {
+    top: 23px;
+    left: -83px;
+  }
+
+  .info {
+
+    h1 {
+      letter-spacing: 8px;
+    }
+  }
+}

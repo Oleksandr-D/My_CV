@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,13 +9,23 @@ export class HeaderComponent implements OnInit {
 public isMobileScreen!: boolean;
 public isOpen = false;
 
-  constructor() { }
+  constructor() { 
+    this.checkScreenSize();
+  }
 
   ngOnInit(): void {
   }
 
   mobileMenu(){
     this.isOpen = !this.isOpen
+  }
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize() {
+    this.isMobileScreen = window.innerWidth < 1026;
   }
 
   toTop():void{
@@ -26,18 +36,11 @@ public isOpen = false;
   }
 
   playNavSound(){
-    const nameSound = document.getElementById('sound') as HTMLAudioElement;
-    if (nameSound && !this.isMobileScreen) {
-      nameSound.volume = 0.1;
-      nameSound.play();
-    }
+    // const nameSound = document.getElementById('sound') as HTMLAudioElement;    
+    // if (nameSound && !this.isMobileScreen) {
+    //   nameSound.volume = 0.5;
+    //   nameSound.play();
+    // }
   }
 
-  stopNavSound() {
-    const stopSound = document.getElementById('sound') as HTMLAudioElement;
-    if (stopSound) {
-      stopSound.pause();
-      stopSound.currentTime = 0;
-    }
-  }
 }
