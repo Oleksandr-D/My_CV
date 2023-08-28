@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -8,8 +9,14 @@ import { Component, OnInit, HostListener } from '@angular/core';
 export class AboutComponent implements OnInit {
 
   public url = 'https://drive.google.com/file/d/142BuwRYpHZuy9LUp-xFG0CKxeS83Uc9A/view?usp=drive_link';
+ 
+  public videoLinks: SafeResourceUrl[] = [
+    this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/9_tyC7ZjrXM?si=KmDBx2vHPeH4nwlM'),
+    this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/0qhz0TQwOug?si=_MM8cQ3R9q8zVNDv'),
+    this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/IsiqpLrP818?si=dPYIMjDWfHIAIgSP'),
+  ];
 
-  constructor() {}
+  constructor(private sanitizer: DomSanitizer) {}
 
   ngOnInit(): void {}
 
@@ -18,6 +25,7 @@ export class AboutComponent implements OnInit {
   onScroll() {
     this.handleScroll('.edu-scroll', '.lerning-scroll');
     this.handleScroll('.ex-scroll', '.inv-scroll');
+    this.handleScroll('.cr-scroll', '.le-scroll');
   }
 
   private handleScroll(h1Selector: string, pSelector: string) {
@@ -43,4 +51,6 @@ export class AboutComponent implements OnInit {
       }
     }
   }
+
+
 }

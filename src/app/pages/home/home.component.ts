@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent implements OnInit{
   public isMobileScreen!: boolean;
 
@@ -85,6 +86,13 @@ export class HomeComponent implements OnInit{
       stopSound.pause();
       stopSound.currentTime = 0;
     }
+  }
+
+  toTop():void{
+    window.scroll({
+      top: 0,
+      behavior: 'smooth',
+    });
   }
 
 }

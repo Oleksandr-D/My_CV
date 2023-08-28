@@ -10,6 +10,17 @@
   box-sizing: border-box;
 }
 
+body, h1, h2, h3, p, ul, li, a, button, input, select, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  border-radius: 0px;
+}
+
 ol,
 ul {
   list-style: none;

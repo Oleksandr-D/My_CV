@@ -26,7 +26,8 @@
         HTML, CSS, SCSS and Angular.
       </p>
       <a [routerLink]="['/work']">
-        <div class="btn from-right" (mouseenter)="playHoverSound()" (mouseleave)="stopHoverSound()">
+        <div class="btn from-right" (mouseenter)="playHoverSound()" 
+        (mouseleave)="stopHoverSound()" (click)="toTop()">
           See my works
         </div>
       </a>
