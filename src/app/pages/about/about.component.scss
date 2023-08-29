@@ -17,7 +17,6 @@
 .section {
   width: 100%;
   font-family: $main-font;
-
   color: $main-text-color;
 }
 
@@ -171,12 +170,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 850px;
 }
 
+.experiance-section {
+  margin-bottom: 250px;
+}
 
-.education-section{
-  
+.education-section {
   background-color: rgba(0, 19, 23, 0.705);
 }
 
@@ -235,7 +235,7 @@
 
 .education-data {
   width: 80%;
-  margin-top: 100px;
+  margin: 150px 0px;
   position: relative;
 }
 
@@ -402,20 +402,19 @@
   background-color: rgba(0, 19, 23, 0.705);
 }
 
-
-
 .carousel-container {
+  width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 100px;
-  padding: 0px 150px;
+  margin-top: 150px;
+  padding: 0px 5%;
 
 }
 
 .carousel-wraper {
 
   .carousel {
-    width: 500px;
+    width: 550px;
     height: 300px;
   }
 
@@ -423,15 +422,32 @@
     width: 100%;
     height: 300px;
   }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 10%;
+    height: 50%;
+    top: 80px;
+  }
+
+  .carousel-indicators {
+    margin-bottom: 1.5%;
+    margin-right: 30%;
+    margin-left: 30%;
+  }
 }
 
 .carousel-info {
-  width: 600px;
+  width: 550px;
   height: 300px;
   margin-right: 50px;
   font-size: 16px;
   line-height: 140%;
   color: $second-text-color;
+}
+
+.spacer-200 {
+  display: none;
 }
 
 @media screen and (max-width:1025px) {
@@ -443,8 +459,16 @@
     width: 100%;
   }
 
-  .education-data {
+  .container-creativity,
+  .creativity-section,
+  .experiance-section {
+    height: 100%;
+  }
+
+  .education-data,
+  .experiance-section {
     width: 100%;
+    margin-bottom: 150px;
   }
 
   .wraper-experiancebox {
@@ -455,6 +479,26 @@
 
   .experiancebox:hover .experiancebox-year {
     display: none;
+  }
+
+  .carousel-container {
+    flex-direction: column;
+    padding: 0px 15%;
+    margin-bottom: 150px;
+
+    .carousel-info {
+      width: 100%;
+      height: 100%;
+      margin-right: 0px;
+      margin-bottom: 50px;
+    }
+
+    .carousel-wraper {
+      .carousel {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
 
@@ -490,10 +534,6 @@
     width: 80%;
   }
 
-  .education-section {
-    padding-top: 100px;
-  }
-
   .educationbox-info {
     padding: 0px 20px;
   }
@@ -505,11 +545,14 @@
     height: 450px;
   }
 
+  .experiance-section {
+    margin-bottom: 250px;
+  }
 
   .experiancebox {
     width: 80%;
     padding: 25px 25px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
 
   .experiancebox:hover .experiancebox-year {
@@ -518,6 +561,10 @@
     z-index: 10;
     font-size: 50px;
     transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  }
+
+  .carousel-container {
+    padding: 0px 10%;
   }
 }
 
@@ -542,9 +589,8 @@
   }
 
   .btn {
-    margin-bottom: 100px;
+    margin-top: 0px;
   }
-
 
   .mobil-about {
     width: 100%;
@@ -555,6 +601,7 @@
   .education-section {
     width: 100%;
     margin-top: 400px;
+    background-color: rgb(43, 49, 50);
   }
 
   .education-data {
@@ -577,20 +624,39 @@
     margin: 40px 0px;
   }
 
+  .wraper-experiancebox {
+    margin-top: 150px;
+  }
+
+  .experiancebox {
+    width: 90%;
+    background-color: rgb(43, 49, 50);
+    box-shadow: 0px 0px 15px 0px rgb(153, 175, 178);
+  }
+
   .experiancebox-year {
     display: none;
   }
+
+  .creativity-section {
+    background-color: rgb(43, 49, 50);
+  }
+
+  .spacer-200 {
+    display: block;
+  }
 }
 
-@media screen and (max-width: 427px) {
+@media screen and (max-width: 457px) {
   .section {
     font-size: 14px;
   }
 
   .btn {
     height: 60px;
-    line-height: 60px;
+    line-height: 45px;
     font-size: 90%;
+    margin-top: 20px;
   }
 
   .wraper-about a {
@@ -601,12 +667,17 @@
     font-size: 16px;
   }
 
+  .education-section {
+    margin-top: 550px;
+    padding: 0px;
+  }
+
   .education-data {
     width: 90%;
   }
 
-  .experiancebox {
-    width: 90%;
+  .experiance-section {
+    margin-bottom: 100px;
   }
 
   .wraper-experiancebox {
@@ -618,6 +689,10 @@
     line-height: 140%;
   }
 
+  .carousel-container {
+    padding: 0px 5%;
+  }
+
   .spacer-200 {
     height: 100px;
   }
@@ -626,7 +701,6 @@
 @media screen and (max-width: 311px) {
 
   .education-header h1 {
-
     margin-left: 0px;
   }
 
