@@ -16,8 +16,33 @@ export class HomeComponent implements OnInit{
 
   ngOnInit(): void {
     this.checkScreenSizeAndRedirect();
+    this.animateTextOnLoad();
   }
 
+  animateTextOnLoad() {
+    const textElements = document.querySelectorAll<HTMLElement>(".text-animation");
+    const blockElements = document.querySelectorAll<HTMLElement>(".block-animation");
+    const button = document.querySelectorAll<HTMLElement>(".button-animation");
+    
+    const addClassWithDelay = (elements: NodeListOf<HTMLElement>, delay: number) => {
+      elements.forEach((element, index) => {
+        setTimeout(() => {
+          element.classList.add("show");
+        }, index * delay); 
+      });
+    };
+  
+    addClassWithDelay(textElements, 150);
+    
+    setTimeout(() => {
+      addClassWithDelay(blockElements, 150);
+    }, textElements.length * 150 + 200);
+  
+    setTimeout(() => {
+      addClassWithDelay(button, 150);
+    }, textElements.length * 150 + 1200);
+  }
+  
   checkScreenSizeAndRedirect() {
     if (window.innerWidth >= 1240) {
       this.router.navigate(['/home']);

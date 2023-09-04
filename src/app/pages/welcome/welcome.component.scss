@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.912)), url('../../../assets/Images/welcome_backgr.jpg');
+  background-image: linear-gradient(rgb(0, 0, 0), rgba(2, 19, 18, 0.900)), url('../../../assets/Images/welcome_backgr.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -76,6 +76,18 @@
   cursor: pointer;
   user-select: none;
   box-shadow: 0px 0px 20px 0px rgb(235, 235, 235);
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 1px 0px rgb(255, 255, 255);
+  }
+
+  100% {
+    transform: scale(1.01);
+    box-shadow: 0 0 50px 30px rgba(255, 255, 255, 0.009);
+  }
 }
 
 .btn:before,
@@ -124,7 +136,6 @@
 .from-right:hover:after {
   width: 100%;
 }
-
 
 @media screen and (max-width: 1240px) {
   .square {

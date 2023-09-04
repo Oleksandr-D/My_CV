@@ -11,23 +11,55 @@
   <audio id="name-sound">
     <source src="../../../assets/audio/logo.mp3" type="audio/mpeg">
   </audio>
-  <div class="home-banner"> 
+  <div class="home-banner">
     <div class="align-banner">
       <div class="home-image" (mouseenter)="playHoverSound()" (mouseleave)="stopHoverSound()">
       </div>
     </div>
     <div class="banner-info">
-      <h2>Hello, I`m</h2>
+      <h2>
+        <span class="text-animation">H</span>
+        <span class="text-animation">e</span>
+        <span class="text-animation">l</span>
+        <span class="text-animation">l</span>
+        <span class="text-animation">o</span>
+        <span class="text-animation">,</span>
+        <span class="text-animation spacer-span"> </span>
+        <span class="text-animation">I</span>
+        <span class="text-animation">'</span>
+        <span class="text-animation">m</span>
+      </h2>
       <div>
-        <h1 (mouseenter)="playNameSound()" (mouseleave)="stopNameSound()">Oleksandr Dolbnia</h1>
+        <h1 (mouseenter)="playNameSound()" (mouseleave)="stopNameSound()">
+          <div class="first-name">
+            <span class="text-animation">O</span>
+            <span class="text-animation">l</span>
+            <span class="text-animation">e</span>
+            <span class="text-animation">k</span>
+            <span class="text-animation">s</span>
+            <span class="text-animation">a</span>
+            <span class="text-animation">n</span>
+            <span class="text-animation">d</span>
+            <span class="text-animation">r</span>
+            <span class="text-animation spacer-span"> </span>
+          </div>
+          <div class="last-name">
+            <span class="text-animation">D</span>
+            <span class="text-animation">o</span>
+            <span class="text-animation">l</span>
+            <span class="text-animation">b</span>
+            <span class="text-animation">n</span>
+            <span class="text-animation">i</span>
+            <span class="text-animation">a</span>
+          </div>
+        </h1>
       </div>
-      <p>I'm a front-end web developer who does a bit of web design.
+      <p class="block-animation">I'm a front-end web developer who does a bit of web design.
         My main areas of knowledge include Javascript, Typescript,
         HTML, CSS, SCSS and Angular.
       </p>
-      <a [routerLink]="['/work']">
-        <div class="btn from-right" (mouseenter)="playHoverSound()" 
-        (mouseleave)="stopHoverSound()" (click)="toTop()">
+      <a class="button-animation" [routerLink]="['/work']">
+        <div class="btn from-right" (mouseenter)="playHoverSound()" (mouseleave)="stopHoverSound()" (click)="toTop()">
           See my works
         </div>
       </a>
