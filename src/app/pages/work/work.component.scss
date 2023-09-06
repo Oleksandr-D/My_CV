@@ -31,21 +31,36 @@
 }
 
 .box-wrapper {
-  width: 90%;
+  width: 1250px;
   height: 100%;
   margin: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .project-wraper {
-  width: 450px;
-  height: 250px;
-  margin: 50px 80px;
+  width: 420px;
+  height: 240px;
+  margin: 80px 85px;
   position: relative;
   z-index: 9;
   display: flex;
+  transition: all 1s ease-out;
+}
+
+.two {
+  margin: 100px 5px;
+}
+
+.three {
+  margin: 100px 5px;
+}
+
+.project-wraper.scroll-active {
+  transform: scale(1.1);
+  margin: 50px 100px;
+  transition: all 1s ease;
 }
 
 .project-box {
@@ -108,7 +123,7 @@
 .project-wraper:hover .angular-tasks,
 .project-wraper:hover .monosoushi,
 .project-wraper:hover .noa {
-  transform: rotate(10deg) translateX(120px) translateY(-30px);
+  transform: rotate(10deg) translateX(100px) translateY(-30px);
   transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
@@ -138,14 +153,30 @@
 
 @media screen and (max-width: 1370px) {
   .project-wraper {
-    width: 63%;
-    height: 400px;
+    width: 50%;
+    height: 325px;
     margin: 50px 80px;
+  }
+
+  .box-wrapper {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .project-wraper.scroll-active {
+    transform: scale(1.1);
+    margin: 100px 100px;
+    transition: all 1s ease;
   }
 }
 
 @media screen and (max-width: 970px) {
   .box-wrapper {
+    width: 70%;
     flex-direction: column;
     align-content: center;
   }
@@ -190,6 +221,25 @@
 }
 
 @media screen and (max-width: 600px) {
+
+  .project-wraper {
+    height: 250px;
+  }
+
+  .first-project,
+  .second-project,
+  .team-web-site,
+  .angular-tasks,
+  .noa,
+  .monosoushi {
+    width: 100%;
+    height: 100%;
+  }
+
+  .box-wrapper {
+    width: 90%;
+    overflow: hidden;
+  }
 
   .spacer-100px {
     height: 100px;
