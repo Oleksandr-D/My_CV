@@ -8,6 +8,49 @@
   background-image: linear-gradient(rgb(0, 0, 0), rgba(2, 19, 18, 0.900)), url('../../../assets/Images/welcome_backgr.jpg');
   background-size: cover;
   background-position: center;
+  position: relative;
+}
+
+h3 {
+  line-height: 82%;
+  margin-left: 25px;
+  position: absolute;
+  top: 18px;
+  left: 50px;
+}
+
+.logo {
+  font-size: 14px;
+  line-height: 135%;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  background-color: #151515;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #da3737;
+  top: 24px;
+  bottom: 0;
+  left: 60px;
+  margin: 0px auto;
+  z-index: 1;
+  animation: logo 3s ease-in infinite alternate;
+}
+
+@keyframes logo {
+  0% {
+    transform: rotateZ(220deg);
+  }
+
+  50% {
+    transform: rotateZ(0deg)
+  }
+
+  100% {
+    transform: rotateZ(0deg)
+  }
 }
 
 .wraper {
@@ -163,6 +206,14 @@
 }
 
 @media screen and (max-width: 705px) {
+
+  h3 {
+    margin: 0px auto;
+    position: absolute;
+    top: 40px;
+    left: auto;
+  }
+
   .square {
     width: 100px;
     height: 100px;

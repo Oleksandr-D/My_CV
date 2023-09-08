@@ -30,8 +30,8 @@
         <span class="text-animation">m</span>
       </h2>
       <div>
-        <h1 (mouseenter)="playNameSound()" (mouseleave)="stopNameSound()">
-          <div class="first-name">
+        <h1>
+          <div class="first-name" (mouseenter)="playNameSound()" (mouseleave)="stopNameSound()">
             <span class="text-animation">O</span>
             <span class="text-animation">l</span>
             <span class="text-animation">e</span>
@@ -43,7 +43,7 @@
             <span class="text-animation">r</span>
             <span class="text-animation spacer-span"> </span>
           </div>
-          <div class="last-name">
+          <div class="last-name" (mouseenter)="playNameSound()" (mouseleave)="stopNameSound()">
             <span class="text-animation">D</span>
             <span class="text-animation">o</span>
             <span class="text-animation">l</span>
@@ -67,3 +67,11 @@
   </div>
 </section>
 <div class="spacer"></div>
+<div class="cta">
+  <h4>Interested in collaboration?</h4>
+  <p>Leave me a message on 
+    <a href="https://t.me/My_Musical_Intention" target="_blank">
+      <strong>Telegram</strong>
+    </a>, and I'll get back to you shortly."
+  </p>
+</div>

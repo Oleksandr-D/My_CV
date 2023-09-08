@@ -8,7 +8,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class AboutComponent implements OnInit {
 
-  public url = 'https://drive.google.com/file/d/142BuwRYpHZuy9LUp-xFG0CKxeS83Uc9A/view?usp=drive_link';
+  public url = 'https://drive.google.com/file/d/1zOqfiYqmK1PHIKSSCAFSo9uMxvzjzpWt/view?usp=sharing';
  
   public videoLinks: SafeResourceUrl[] = [
     this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/9_tyC7ZjrXM?si=KmDBx2vHPeH4nwlM'),

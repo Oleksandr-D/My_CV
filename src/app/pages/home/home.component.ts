@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 
 export class HomeComponent implements OnInit{
   public isMobileScreen!: boolean;
+  private ctaUpdated = false;
 
   constructor(private router: Router) {
     this.checkScreenSize();
@@ -17,6 +18,19 @@ export class HomeComponent implements OnInit{
   ngOnInit(): void {
     this.checkScreenSizeAndRedirect();
     this.animateTextOnLoad();
+    setTimeout(() => {
+      if (!this.ctaUpdated) {
+        this.updateCtaPosition();
+      }
+    }, 50000);
+  }
+
+  updateCtaPosition() {
+    const cta = document.querySelector('.cta') as HTMLElement;
+    if (cta) {
+      cta.style.right = '0px';
+      this.ctaUpdated = true;
+    }
   }
 
   animateTextOnLoad() {

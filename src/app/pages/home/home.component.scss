@@ -82,7 +82,8 @@
     transition: opacity 0.8s ease-out;
   }
 
-  h1:hover {
+  .first-name:hover,
+  .last-name:hover {
     color: rgb(255, 255, 255);
     transition-duration: 0.5s;
     text-shadow: 0px 0px 10px $main-text-color;
@@ -110,7 +111,7 @@
 }
 
 .btn {
-  width: 350px;
+  width: 300px;
   height: 55px;
   font-family: $main-fontBold;
   text-align: center;
@@ -181,10 +182,46 @@
   display: none;
 }
 
+.cta {
+  width: 230px;
+  height: 26vh;
+  color: $main-text-color;
+  position: fixed;
+  right: -231px;
+  bottom: 0px;
+  border-top: 10px solid $second-color;
+  border-left: 10px solid $second-color;
+  padding: 20px;
+  background-color: $background-color;
+  transition: all 1.5s cubic-bezier(0.06, 0.1, 0.39, 0.87);
+
+  h4 {
+    font-size: 18px;
+    line-height: 100%;
+  }
+
+  p {
+    font-size: 14px;
+    color: $second-text-color;
+    line-height: 140%;
+  }
+
+  strong {
+    font-family: $main-fontBold;
+    font-size: 16px;
+    color: $main-text-color;
+    text-decoration: underline;
+  }
+}
+
 @media screen and (max-width:1510px) {
 
   .banner-info h1 {
     line-height: 65px;
+  }
+
+  .btn {
+    margin-top: 60px;
   }
 }
 
@@ -227,6 +264,10 @@
 
   .banner-info {
     padding: 80px 0px;
+  }
+
+  .cta {
+    display: none;
   }
 }
 
@@ -278,7 +319,6 @@
   }
 
   .home-banner {
-
     padding: 0px;
   }
 
