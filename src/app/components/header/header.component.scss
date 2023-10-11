@@ -10,6 +10,11 @@
    padding: 0px 50px;
    align-items: center;
    justify-content: space-between;
+
+   h3 {
+    line-height: 80%;
+    position: relative;
+  }
  }
 
  .mobile-header {
@@ -29,7 +34,7 @@
        display: block;
        padding: 5px 25px;
        transition-duration: 0.5s;
-       letter-spacing: 1.5px;
+       letter-spacing: 0.5px;
      }
 
      a:hover {
@@ -47,11 +52,7 @@
    }
  }
 
- h3 {
-   line-height: 80%;
-   margin-left: 25px;
-   position: relative;
- }
+
 
  .logo {
    font-size: 14px;
