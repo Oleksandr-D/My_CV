@@ -401,6 +401,7 @@
 .container-creativity {
   height: 850px;
   backdrop-filter: blur(25px);
+  position: relative;
 }
 
 .carousel-container {
@@ -450,7 +451,33 @@
   display: none;
 }
 
-@media screen and (max-width:1025px) {
+.scroll-to-top {
+  height: 36px;
+  width: 36px;
+  background-image: url('../../../assets/Images/3847932_arrows_up_upload_icon.svg');
+  color:rgba(155, 155, 155, 0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 12.5%;
+  bottom: -10px;
+  padding: 6px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  text-transform: uppercase;
+}
+
+.scroll-to-top:hover{
+  height: 36px;
+  width: 6%;
+  border: 3px solid $second-color;
+  background-color: $main-color;
+  color:$main-text-color;
+  transition-duration: 0.3s;
+  background: rgba(221, 221, 221, 0.123) url('../../../assets/Images/3847932_arrows_up_upload_icon.svg') no-repeat center right;
+}
+
+@media screen and (max-width:1065px) {
   .photo p {
     background-position: -40px 0px;
   }
@@ -644,6 +671,12 @@
 
   .spacer-200 {
     display: block;
+  }
+
+  .scroll-to-top {
+    right: auto;
+    bottom: 10px;
+    padding: 20px;
   }
 }
 

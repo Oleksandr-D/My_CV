@@ -25,7 +25,6 @@ export class AdminComponent implements OnInit {
   getPosts():void{
     this.AdminBlogService.getAll().subscribe(data => {
     this.adminPosts = data;
-      console.log(' ==>', data);
     })
   }
 

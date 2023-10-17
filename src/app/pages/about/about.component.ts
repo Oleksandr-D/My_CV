@@ -8,7 +8,9 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class AboutComponent implements OnInit {
 
-  public url = 'https://drive.google.com/file/d/1zOqfiYqmK1PHIKSSCAFSo9uMxvzjzpWt/view?usp=sharing';
+  public isMobileScreen!: boolean;
+
+  public url = 'https://drive.google.com/file/d/1MF1rYf5qpSTZIUZIOwTO1Qc6-88v3E-W/view?usp=sharing';
  
   public videoLinks: SafeResourceUrl[] = [
     this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/9_tyC7ZjrXM?si=KmDBx2vHPeH4nwlM'),
@@ -16,9 +18,25 @@ export class AboutComponent implements OnInit {
     this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/IsiqpLrP818?si=dPYIMjDWfHIAIgSP'),
   ];
 
-  constructor(private sanitizer: DomSanitizer) {}
+  constructor(private sanitizer: DomSanitizer) {
+    this.checkScreenSize();
+  }
 
   ngOnInit(): void {}
+
+  shouldAutoplay() {
+    return !this.isMobileScreen;
+  }
+
+  checkScreenSize() {
+    this.isMobileScreen = window.innerWidth < 1026;
+  }
+
+  
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkScreenSize();
+  }
 
   @HostListener('window:scroll', ['$event'])
   
@@ -51,4 +69,12 @@ export class AboutComponent implements OnInit {
       }
     }
   }
+
+  toTop():void{
+    window.scroll({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
+  
 }

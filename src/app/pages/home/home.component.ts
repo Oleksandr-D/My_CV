@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.checkScreenSizeAndRedirect();
+    //this.checkScreenSizeAndRedirect();
     this.animateTextOnLoad();
     setTimeout(() => {
       if (!this.ctaUpdated) {
@@ -57,11 +57,11 @@ export class HomeComponent implements OnInit{
     }, textElements.length * 150 + 1200);
   }
   
-  checkScreenSizeAndRedirect() {
-    if (window.innerWidth >= 1240) {
-      this.router.navigate(['/home']);
-    }
-  }
+  // checkScreenSizeAndRedirect() {
+  //   if (window.innerWidth >= 1240) {
+  //     this.router.navigate(['/home']);
+  //   }
+  // }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {

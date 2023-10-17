@@ -35,12 +35,4 @@ public isOpen = false;
     });
   }
 
-  playNavSound(){
-    // const nameSound = document.getElementById('sound') as HTMLAudioElement;    
-    // if (nameSound && !this.isMobileScreen) {
-    //   nameSound.volume = 0.5;
-    //   nameSound.play();
-    // }
-  }
-
 }

@@ -1,6 +1,6 @@
 <section class="background">
   <div class="section">
-    <video autoplay loop muted class="background-video">
+    <video [autoplay]="shouldAutoplay()" loop muted class="background-video">
       <source src="../../../assets/video/video (1080p).mp4" type="video/mp4">
     </video>
     <section class="aboutme-section">
@@ -161,8 +161,10 @@
             </div>
           </div>
         </div>
+        <div class="scroll-to-top" (click)="toTop()">up</div>
       </section>
     </div>
   </div>
   <div class="spacer-200"></div>
+ 
 </section>

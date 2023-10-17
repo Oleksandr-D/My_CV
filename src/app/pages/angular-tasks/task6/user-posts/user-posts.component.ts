@@ -21,7 +21,6 @@ export class UserPostsComponent implements OnInit {
   getPosts():void{
     this.AdminBlogService.getAll().subscribe(data => {
       this.userPosts = data;
-      console.log('user Posts site ==>', data);
     })
   }
 }
