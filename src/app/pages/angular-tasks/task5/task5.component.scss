@@ -30,7 +30,8 @@ section {
   align-items: center;
 }
 
-.modal-window-wraper {
+.modal-window-wraper,
+.sign-up-window-wraper {
   margin: auto;
   width: 100%;
   min-height: 350px;
@@ -204,6 +205,163 @@ main {
   justify-content: space-evenly;
 }
 
+
+.sign-up-window-wraper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: $linear-gradient;
+  box-shadow: 0px 0px 7px 1px #636363;
+}
+
+.sign-up-window {
+  width: 40%;
+  height: 350px;
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .modal-title {
+    height: 40px;
+  }
+
+  label {
+    margin: 20px 0px 5px 0px;
+  }
+
+  .modal-btn-wraper {
+    margin-top: 20px;
+    justify-content: flex-start;
+  }
+}
+
+.circle-wraper {
+  width: 40%;
+  height: 350px;
+  padding: 10px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .circle {
+    width: 250px;
+    height: 250px;
+    border: 3px solid $main-text-color;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    .gray,
+    .red,
+    .first-red,
+    .yellow,
+    .second-yellow,
+    .green {
+      position: absolute;
+      background-color: transparent;
+      width: 100%;
+      height: 100%;
+    }
+
+    .gray {
+      width: 454px;
+      height: 314px;
+      clip-path: polygon(-185% 114%, 234% 156%, 103% 0);
+      background-color: rgb(151, 151, 151);
+      transform: rotate(306deg);
+      left: -155px;
+      top: -10px;
+    }
+
+    .first-red {
+      width: 100%;
+      height: 100%;
+      background-color: rgb(107, 107, 107);
+      z-index: 1;
+      display: none;
+    }
+
+    .first-red.visible {
+      display: block;
+    }
+
+    .red {
+      clip-path: polygon(-106% 211%, 72% 63%, 54% 0);
+      background-color: rgb(218, 42, 42);
+      transform: rotate(130deg);
+      left: 58px;
+      top: -6px;
+      z-index: 1;
+      display: none;
+    }
+
+    .red.visible {
+      display: block;
+    }
+
+    .second-yellow {
+      clip-path: polygon(-106% 211%, 72% 63%, 54% 0);
+      background-color: rgb(232, 232, 0);
+      transform: rotate(130deg);
+      left: 58px;
+      top: -6px;
+      z-index: 2;
+      display: none;
+    }
+
+    .second-yellow.visible {
+      display: block;
+    }
+
+    .yellow {
+      clip-path: polygon(-204% 114%, 62% 65%, 103% 0);
+      background-color: #ffff70;
+      transform: rotate(213deg);
+      z-index: 2;
+      top: 60px;
+      display: none;
+    }
+
+    .yellow.visible {
+      display: block;
+    }
+
+    .green {
+      background-color: green;
+      z-index: 3;
+      display: none;
+    }
+
+    .green.visible {
+      display: block;
+    }
+
+    .small-circle {
+      width: 130px;
+      height: 130px;
+      border: 3px solid $main-text-color;
+      background-color: $main-color;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9;
+      overflow: hidden;
+
+      .password-level {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 18px;
+        text-align: center;
+        transition-duration: 0.3s;
+      }
+    }
+  }
+}
+
 .modal-title {
   font-size: 25px;
   height: 50px;
@@ -215,7 +373,7 @@ main {
 input,
 textarea {
   height: 35px;
-  background-color: #b9b9b960;
+  background-color: #eaeaea7e;
   box-shadow: 0px 0px 7px 1px #000000;
   outline: none;
   padding-left: 5px;
@@ -224,8 +382,8 @@ textarea {
 
 input:focus,
 textarea:focus {
-  box-shadow: 0px 0px 7px 3px #ffffff;
-  background-color: #afafaf80;
+  box-shadow: 0px 0px 5px 2px #ffffff;
+  background-color: #c3c3c3;
 }
 
 .modal-btn-wraper {

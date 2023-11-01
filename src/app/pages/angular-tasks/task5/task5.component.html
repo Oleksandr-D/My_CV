@@ -71,19 +71,33 @@
       </div>
     </ng-container>
     <ng-container>
-      <div *ngIf="signUpWindow" class="modal-window-wraper">
-        <div class="modal-window">
+      <div *ngIf="signUpWindow" class="sign-up-window-wraper">
+        <div class="sign-up-window">
           <h3 class="modal-title">Sign Up</h3>
-          <span>User name:</span>
+          <label>User name:</label>
           <input [(ngModel)]="userName" name="userName" id="log" log type="text">
-          <span>Email:</span>
+          <label>Email:</label>
           <input [(ngModel)]="email" name="email" id="em" type="email">
-          <span>Password:</span>
-          <input [(ngModel)]="password" name="password" id="paswd" type="password">
+          <label>Password:</label>
+          <input [(ngModel)]="password" name="password" id="paswd" type="password"
+          (input)="updatePasswordStrength()">
           <p class="modal-btn-wraper">
             <button (click)="signUp()" type="button" id="close">Close</button>
             <button (click)="signUpSubmit()" type="button" id="submit">Submit</button>
           </p>
+        </div>
+        <div class="circle-wraper">
+          <div class="circle">
+            <div class="red" [ngClass]="{'visible': redVisible}"></div>
+            <div class="first-red" [ngClass]="{'visible': firstRedVisible}"></div>
+            <div class="gray"></div>
+            <div class="yellow" [ngClass]="{'visible': yellowVisible}"></div>
+            <div class="second-yellow" [ngClass]="{'visible': secondYellowVisible}"></div>
+            <div class="green" [ngClass]="{'visible': greenVisible}"></div>
+            <div class="small-circle">
+              <div class="password-level">{{ passwordLevel }}</div>
+            </div>
+          </div>
         </div>
       </div>
     </ng-container>

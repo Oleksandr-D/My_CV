@@ -15,7 +15,7 @@ export class Task5Component implements OnInit {
   public enterStatus = true;
   public signInWindow = false;
   public addPostWindow = false;
-  public signUpWindow = false;
+  public signUpWindow = true;
   public adminStatus = false;
   public userBlogs!: IBlog[];
   public newUser: IUsers[] = [];
@@ -35,6 +35,12 @@ export class Task5Component implements OnInit {
   public paswdRegExp: RegExp = /^[a-zA-Z0-9]{4,16}$/;
   public addUserStatus = false;
   public name!: string;
+  public passwordLevel: string = "Enter more than 8 characters";
+  public redVisible: boolean = false;
+  public firstRedVisible: boolean = false;
+  public yellowVisible: boolean = false;
+  public secondYellowVisible: boolean = false;
+  public greenVisible: boolean = false;
 
   constructor(private blogService: AngularBlogService) {};
 
@@ -206,5 +212,76 @@ export class Task5Component implements OnInit {
       alert('Check the entered data')
     };
   };
+
+  updatePasswordStrength(): void {
+    if (this.password.length > 0 && this.password.length <= 8) {
+      this.firstRedVisible = true;
+      this.passwordLevel = 'Your password is...';
+    } else {
+      this.firstRedVisible = false;
+    }
+
+    if (this.password.length > 8 && (this.isOnlyLetters() || this.isOnlyDigits() || this.isOnlySymbols())) {
+      this.redVisible = true;
+      this.passwordLevel = 'Easy';
+    } else {
+      this.redVisible = false;
+      this.passwordLevel = 'Your password is...';
+    }
+
+    if (this.password.length > 8) {
+      if (this.isCombinationOfLettersAndSymbols() || this.isCombinationOfLettersAndDigits() || this.isCombinationOfDigitsAndSymbols()) {
+        this.yellowVisible = true;
+        this.secondYellowVisible = true;
+        this.passwordLevel = 'Medium';
+      } else {
+        this.yellowVisible = false;
+        this.secondYellowVisible = false;
+      }} else {
+      this.yellowVisible = false;
+      this.secondYellowVisible = false;
+    }
+    if (this.password.length > 8){
+      if (this.hasAllTypes()) {
+        this.greenVisible = true;
+        this.passwordLevel = 'Strong';
+      } else {
+        this.greenVisible = false;
+      }
+    }
+      else {
+        this.greenVisible = false;
+    }
+  }
+ 
+  private isOnlyLetters(): boolean {
+    return /^[a-zA-Z]+$/.test(this.password);
+  }
+
+  private isOnlyDigits(): boolean {
+    return /^[0-9]+$/.test(this.password);
+  }
+
+  private isOnlySymbols(): boolean {
+    return /^[^\w\s\d]+$/.test(this.password);
+  }
+
+  private isCombinationOfLettersAndSymbols(): boolean {
+    return /[a-zA-Z]+[^a-zA-Z\d\s]+|[^a-zA-Z\d\s]+[a-zA-Z]+/.test(this.password);
+  }
+
+  private isCombinationOfLettersAndDigits(): boolean {
+    return /[a-zA-Z]+\d+|\d+[a-zA-Z]+/.test(this.password);
+  }
+  
+  private isCombinationOfDigitsAndSymbols(): boolean {
+    return /\d+[^a-zA-Z\d\s]|[^a-zA-Z\d\s]+\d+/.test(this.password);
+  }
+
+  private hasAllTypes(): boolean {
+    const has = (regex: RegExp) => regex.test(this.password);
+    return has(/[a-zA-Z]/) && has(/\d/) && has(/[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/);
+  }
+  
 
 };
