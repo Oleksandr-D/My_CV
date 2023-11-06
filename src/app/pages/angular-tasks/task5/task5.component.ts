@@ -15,7 +15,7 @@ export class Task5Component implements OnInit {
   public enterStatus = true;
   public signInWindow = false;
   public addPostWindow = false;
-  public signUpWindow = true;
+  public signUpWindow = false;
   public adminStatus = false;
   public userBlogs!: IBlog[];
   public newUser: IUsers[] = [];
@@ -32,7 +32,7 @@ export class Task5Component implements OnInit {
   public em!: any;
   public loginRegExp: RegExp = /^[A-Za-zА-Яа-я]{3,17}$/;
   public emailRegExp: RegExp = /^[a-zA-Z0-9_.&#]+[^\s@]+@[^\s@]+[.][^\s@\W]{1,3}$/;
-  public paswdRegExp: RegExp = /^[a-zA-Z0-9]{4,16}$/;
+  public paswdRegExp: RegExp = /^[a-zA-Z0-9!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]{8,30}$/;
   public addUserStatus = false;
   public name!: string;
   public passwordLevel: string = "Enter more than 8 characters";
@@ -47,7 +47,6 @@ export class Task5Component implements OnInit {
   ngOnInit(): void {
     this.getServiceData();
   };
-
   //get data from servise
   getServiceData(): void {
     this.userBlogs = this.blogService.getBlogs();
@@ -143,6 +142,12 @@ export class Task5Component implements OnInit {
     this.userName = '';
     this.email = '';
     this.password = '';
+    this.passwordLevel = "Enter more than 8 characters";
+    this.redVisible = false;
+    this.firstRedVisible = false;
+    this.yellowVisible = false;
+    this.secondYellowVisible = false;
+    this.greenVisible = false;
   };
   //button edit
   editBlog(blog: IBlog): void {
@@ -282,6 +287,4 @@ export class Task5Component implements OnInit {
     const has = (regex: RegExp) => regex.test(this.password);
     return has(/[a-zA-Z]/) && has(/\d/) && has(/[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/);
   }
-  
-
 };
