@@ -27,7 +27,7 @@ export class Task2Component implements OnInit {
   public em!: any;
   public loginRegExp: RegExp = /^[a-zA-Z]{3,16}$/;
   public emailRegExp: RegExp = /^[a-zA-Z0-9_.&#]+[^\s@]+@[^\s@]+[.][^\s@\W]{1,3}$/;
-  public paswdRegExp: RegExp = /^[a-zA-Z0-9]{4,16}$/;
+  public paswdRegExp: RegExp = /^[a-zA-Z0-9]{3,16}$/;
   public addUserStatus = false;
 
   constructor() {}

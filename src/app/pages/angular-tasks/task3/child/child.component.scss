@@ -7,6 +7,7 @@ table {
   border-spacing: 0;
   margin-top: 30px;
   border-top: 2px solid rgb(180, 180, 180);
+  color: $second-text-color;
 }
 
 tr {
@@ -47,6 +48,7 @@ td {
   padding: 0.3rem;
   text-decoration: none;
   transition: all 235ms ease-in-out;
+  border-color: $main-text-color;
   border-bottom-left-radius: 15px 255px;
   border-bottom-right-radius: 225px 15px;
   border-top-left-radius: 255px 15px;
@@ -55,9 +57,8 @@ td {
 
 #delete-task:hover,
 #edit:hover {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  box-shadow: rgba(255, 255, 255, 0.555) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
-  background-color: rgb(233, 9, 9);
 }
 
 #delete-task:disabled,
